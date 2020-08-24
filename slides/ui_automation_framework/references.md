@@ -15,3 +15,21 @@
 ## Others
 
 - [How we approach testing VSTS to enable continuous delivery - Brian harry Microsoft](https://devblogs.microsoft.com/bharry/testing-in-a-cloud-delivery-cadence/)
+
+## On BDD and cucumber
+
+- [Writing good gherkin - Automation panda](https://automationpanda.com/2017/01/30/bdd-101-writing-good-gherkin/)
+- [The world's most misunderstood collaboration tool by Aslak Hellesøy](https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/)
+- [A case against cucumber - Hackernews thread](https://news.ycombinator.com/item?id=6411787)
+
+## On patterns
+
+### Page objects
+
+- [Page object models - Selenium.dev](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/)
+- [Tips for healthy page objects - Angie jones](https://angiejones.tech/page-object-model/)
+
+## On API
+
+- [Beaufort fairmont](https://beaufortfairmont.com/webinars/)
+- [OnTestAutomation - Bas Dijkstra](https://www.ontestautomation.com/articles/)
