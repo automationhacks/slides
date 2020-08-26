@@ -10,7 +10,7 @@ Welcome to slides's documentation!
    :maxdepth: 2
    :caption: Contents
 
-   /docs/ui_automation_framework/welcome
+   /docs/ui_automation_framework/welcome.rst
 
 
 

@@ -9,6 +9,7 @@ black = "*"
 [packages]
 sphinx = "*"
 recommonmark = "*"
+jupyter-sphinx-theme = "*"
 
 [requires]
 python_version = "3.8"
