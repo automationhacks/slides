@@ -16,7 +16,8 @@
 - Ideally, Max 2 assertions per test
 - Use API/Inject JS/Cookies/Modify DB to set application state
 
-> 💡: Follow [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html)
+> 💡: Follow
+> [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html)
 
 ## Arrange act assert
 
@@ -43,7 +44,7 @@
 
 ## Fluent pattern 🏃
 
-![To do with 2 notes added](images/todo_2_notes_added.png)
+![To do with 2 notes added](images/todo.png)
 
 ```java
 @Test(groups = Tags.REGRESSION)
@@ -73,4 +74,3 @@ public void testToDoItemsLeft() {
 ## Screenplay pattern
 
 ## Builder pattern
-

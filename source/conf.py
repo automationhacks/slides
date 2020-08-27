@@ -24,7 +24,7 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Project information -----------------------------------------------------
 
-project = "slides"
+project = "Talks by Gaurav"
 copyright = "2020, Gaurav Singh"
 author = "Gaurav Singh"
 
@@ -82,7 +82,6 @@ def setup(app):
     app.add_config_value(
         "recommonmark_config",
         {
-            # 'url_resolver': lambda url: github_doc_root + url,
             "auto_toc_tree_section": "welcome",
             "enable_eval_rst": True,
         },

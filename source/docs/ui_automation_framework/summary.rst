@@ -2,7 +2,7 @@ How to build an automation framework with selenium : patterns and practices
 ===========================================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Table of contents
 
    00_about.md
