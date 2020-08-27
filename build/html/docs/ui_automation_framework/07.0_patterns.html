@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Sensible patterns and practices 😇 &mdash; slides 0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Avoid these anti patterns" href="08.0_anti_patterns.html" />
+    <link rel="prev" title="In house vs cloud grid solution" href="06.0_grid.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> slides
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="summary.html">How to build an automation framework with selenium : patterns and practices</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="00_about.html">About me</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html">Introduction to building frameworks 🏗</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02.0_language.html">Choosing a language ✏️</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03.0_test_framework.html">Choosing a test framework tool/library ⚙️</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04.0_reporting.html">Logging/reporting 📈</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.0_ci.html">CI 🏃🏻‍♂️</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06.0_grid.html">In house vs cloud grid solution</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Sensible patterns and practices 😇</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#atomic-tests">Atomic tests ⚛️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arrange-act-assert">Arrange act assert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#parallel-tests">Parallel tests</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#page-object">Page object</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#fluent-pattern">Fluent pattern 🏃</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#more-readable-with-fluent">More readable with fluent</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#screenplay-pattern">Screenplay pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#builder-pattern">Builder pattern</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="08.0_anti_patterns.html">Avoid these anti patterns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">slides</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="summary.html">How to build an automation framework with selenium : patterns and practices</a> &raquo;</li>
+        
+      <li>Sensible patterns and practices 😇</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/ui_automation_framework/07.0_patterns.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sensible-patterns-and-practices">
+<h1>Sensible patterns and practices 😇<a class="headerlink" href="#sensible-patterns-and-practices" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Write <strong>Atomic</strong> tests ⚛️</p></li>
+<li><p>Using <strong>API or DB</strong> for data setup/teardown</p></li>
+<li><p>Run tests in <strong>parallel</strong> from the start 🏃 🏃</p></li>
+<li><p>Arrange act assert 💪</p></li>
+<li><p>Page object pattern 📃</p></li>
+<li><p>Fluent pattern 🏃</p></li>
+<li><p>Screenplay pattern 🎥</p></li>
+<li><p>Builder pattern for API or data objects 🏗</p></li>
+<li><p>Factory pattern 🏭</p></li>
+</ul>
+<div class="section" id="atomic-tests">
+<h2>Atomic tests ⚛️<a class="headerlink" href="#atomic-tests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Write targeted tests</p></li>
+<li><p>Ideally, Max 2 assertions per test</p></li>
+<li><p>Use API/Inject JS/Cookies/Modify DB to set application state</p></li>
+</ul>
+<blockquote>
+<div><p>💡: Follow <a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="arrange-act-assert">
+<h2>Arrange act assert<a class="headerlink" href="#arrange-act-assert" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Setup data/state</p></li>
+<li><p>Perform a test</p></li>
+<li><p>Assert on the state</p></li>
+<li><p><strong>Cleanup</strong></p></li>
+</ul>
+<blockquote>
+<div><p>Some prefer Given/When/Then to the above convention, both are same in spirit</p>
+</div></blockquote>
+</div>
+<div class="section" id="parallel-tests">
+<h2>Parallel tests<a class="headerlink" href="#parallel-tests" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Atomic tests work great in parallel</p></li>
+<li><p>Do NOT use static keyword/shared state</p></li>
+<li><p>Outcome of one test should not cause another to fail</p>
+<ul>
+<li><p>Don’t chain tests</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="page-object">
+<h2>Page object<a class="headerlink" href="#page-object" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Write page objects for <strong>components</strong> within pages</p></li>
+<li><p>Should be well named, and specify intent</p></li>
+<li><p>Properties and behaviors encapsulated as methods</p></li>
+<li><p>Don’t have webdriver API calls in page objects, instead inherit/compose from a base page</p></li>
+</ul>
+</div>
+<div class="section" id="fluent-pattern">
+<h2>Fluent pattern 🏃<a class="headerlink" href="#fluent-pattern" title="Permalink to this headline">¶</a></h2>
+<p><img alt="To do with 2 notes added" src="../../_images/todo_2_notes_added.png" /></p>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span> <span class="o">=</span> <span class="n">Tags</span><span class="p">.</span><span class="na">REGRESSION</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testToDoItemsLeft</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">HomePage</span> <span class="n">home</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HomePage</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+    <span class="n">home</span><span class="p">.</span><span class="na">addTodo</span><span class="p">(</span><span class="s">&quot;Get work done&quot;</span><span class="p">);</span>
+    <span class="n">home</span><span class="p">.</span><span class="na">addTodo</span><span class="p">(</span><span class="s">&quot;relax&quot;</span><span class="p">);</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="more-readable-with-fluent">
+<h3>More readable with fluent<a class="headerlink" href="#more-readable-with-fluent" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>💡return either the <strong>current page object</strong> or the <strong>next page object</strong> to enable fluent methods</p>
+</div></blockquote>
+<div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="nd">@Test</span><span class="p">(</span><span class="n">groups</span> <span class="o">=</span> <span class="n">Tags</span><span class="p">.</span><span class="na">REGRESSION</span><span class="p">)</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">testToDoItemsLeft</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// More readable 😄</span>
+    <span class="n">HomePage</span> <span class="n">home</span> <span class="o">=</span> <span class="k">new</span> <span class="n">HomePage</span><span class="p">(</span><span class="n">driver</span><span class="p">)</span>
+            <span class="p">.</span><span class="na">addTodo</span><span class="p">(</span><span class="s">&quot;Get work done&quot;</span><span class="p">)</span>
+            <span class="p">.</span><span class="na">addTodo</span><span class="p">(</span><span class="s">&quot;relax&quot;</span><span class="p">);</span>
+    <span class="p">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="screenplay-pattern">
+<h2>Screenplay pattern<a class="headerlink" href="#screenplay-pattern" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="builder-pattern">
+<h2>Builder pattern<a class="headerlink" href="#builder-pattern" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="08.0_anti_patterns.html" class="btn btn-neutral float-right" title="Avoid these anti patterns" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="06.0_grid.html" class="btn btn-neutral float-left" title="In house vs cloud grid solution" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Gaurav Singh
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

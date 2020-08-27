@@ -1,0 +1,25 @@
+# Choosing a language ✏️
+
+Available choices
+
+- Statically typed: Java, Kotlin, C#, TypeScript
+- Dynamic: Python, JS, Ruby
+
+## How to decide 🤔
+
+- Choose language that **devs also use**
+  - Y? Less friction in getting devs to contribute
+    > Quality _should be_ the whole team's responsibility
+- Easy to find people in the industry with knowledge
+  - Y? Easy to onboard new members in the team
+- Undergoing active development, thriving and supportive community
+- Well defined ecosystem of tools and libraries
+
+## Can't go wrong with
+
+- Python
+- Java/Kotlin
+- JS
+- Ruby
+
+> 🤫 Selenium/Appium has **client bindings** for all the above languages

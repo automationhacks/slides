@@ -1,0 +1,16 @@
+# Logging/reporting 📈
+
+## How to choose 🤔
+
+- Easy to see exception stack traces
+- Failed assertions and associated logs
+- Good overview of **pass/fail/skipped** metrics
+- Should have **historical results** comparison
+
+## Some available choices
+
+- [Gradle reports](https://docs.gradle.org/current/userguide/java_testing.html)
+- [Cucumber reports](https://cucumber.io/docs/cucumber/reporting/)
+- [Report portal](https://reportportal.io/) 🤘🏼
+- [Allure](http://allure.qatools.ru/)
+- [Extent reports](https://extentreports.com/)
