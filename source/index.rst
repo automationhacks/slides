@@ -5,6 +5,6 @@ Talks by Gaurav Singh
    :maxdepth: 1
    :caption: Glossary
 
-   /docs/ui_automation_framework/summary.rst
+   /docs/ui_automation_framework/index.rst
 
 
