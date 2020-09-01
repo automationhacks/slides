@@ -84,7 +84,7 @@
             
               <p class="caption"><span class="caption-text">Glossary</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="summary.html">How to build an automation framework with selenium : patterns and practices</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How to build an automation framework with selenium : patterns and practices</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="00_about.html">About me</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html">Introduction to building frameworks 🏗</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02.0_language.html">Choosing a language ✏️</a></li>
@@ -95,11 +95,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="04.0_reporting.html">Logging/reporting 📈</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.0_ci.html">CI 🏃🏻‍♂️</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.0_ci.html">Continuous Integration (CI) 🏃🏻‍♂️</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06.0_grid.html">In house vs cloud grid solution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07.0_patterns.html">Sensible patterns and practices 😇</a></li>
 <li class="toctree-l2"><a class="reference internal" href="08.0_anti_patterns.html">Avoid these anti patterns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="09.0_next_steps.html">Next steps: Where do you go from here</a></li>
 </ul>
 </li>
 </ul>
@@ -148,7 +148,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="summary.html">How to build an automation framework with selenium : patterns and practices</a> &raquo;</li>
+          <li><a href="index.html">How to build an automation framework with selenium : patterns and practices</a> &raquo;</li>
         
       <li>Choosing a test framework tool/library ⚙️</li>
     
@@ -192,12 +192,12 @@
 <td>Behave, pytest-bdd</td>
 </tr>
 </tbody>
-</table><p>Think 🤔</p>
+</table><p>Think hard! 🤔❗️</p>
 <ul class="simple">
-<li><p>Who would be the primary <strong>author</strong> of the tests?</p>
+<li><p>Who would be the primary <strong>author</strong> of these tests?</p>
 <ul>
-<li><p>Are they Developers, Automation engineers (XUnit)</p></li>
-<li><p>Are they Product managers, Manual testers (BDD)</p></li>
+<li><p>Are they Developers, Automation engineers (Choose xUnit)</p></li>
+<li><p>Are they Product managers (PM), Manual testers (BDD <strong>can be</strong> an option)</p></li>
 </ul>
 </li>
 </ul>
@@ -206,7 +206,7 @@
 <p><strong>Benefits</strong> ➕</p>
 <ul class="simple">
 <li><p>Fast and less boilerplate</p></li>
-<li><p>Setup/tear downs at different levels (Suite, Class, Test)</p></li>
+<li><p>Easy setup/tear downs at different levels (Suite, Class, Test)</p></li>
 <li><p>Flexible</p></li>
 <li><p>Easy to <strong>data drive/parallelize</strong> tests</p></li>
 </ul>
@@ -225,14 +225,14 @@
 <li><p>Readable (Gherkin syntax with <code class="docutils literal notranslate"><span class="pre">Given/When/Then/And</span></code>)</p></li>
 <li><p>Accessible to PM/Test engineers</p></li>
 <li><p>Provides a layer to allow non-coders to also contribute</p></li>
-<li><p>Generally a more readable report</p></li>
+<li><p>Generally a bit more readable test results report</p></li>
 </ul>
 <p><strong>Tradeoffs</strong> ➖</p>
 <ul class="simple">
-<li><p>Maintaining a BDD layer (feature files, step definitions) can be an overhead</p></li>
+<li><p>Maintaining a BDD layer (feature files, step definitions) in most cases can be an overhead</p></li>
 <li><p>Less flexible</p></li>
 <li><p>Difficult to implement parallelization (can only do at Feature file level)</p></li>
-<li><p>Easy to write imperative instead of declarative feature files</p></li>
+<li><p>Easy to fall into writing feature files that are imperative instead of declarative</p></li>
 </ul>
 <blockquote>
 <div><p>If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
@@ -242,8 +242,11 @@ Reference:
 </div>
 <div class="section" id="choosing-an-assertion-library">
 <h2>Choosing an assertion library 🕵🏻‍♂️<a class="headerlink" href="#choosing-an-assertion-library" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Let’s not reinvent the wheel ☸️ shall we? 😄</p>
+</div></blockquote>
 <ul class="simple">
-<li><p>Choose a good fluent lib to make for more readable assertions</p></li>
+<li><p>Choose a good fluent assertion lib to increase readibility</p></li>
 </ul>
 <table border="1" class="docutils">
 <thead>

@@ -1,4 +1,8 @@
-# References
+# Next steps: Where do you go from here
+
+Read/follow these articles to gain more context.
+
+> Learn constantly, experiment and figure out what works best for you
 
 ## Nikolay Advolodkin
 
@@ -29,7 +33,20 @@
 - [Page object models - Selenium.dev](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/)
 - [Tips for healthy page objects - Angie jones](https://angiejones.tech/page-object-model/)
 
-## On API
+### Page factory
+
+- [Selenium design patterns - Dzone](https://dzone.com/articles/selenium-design-patterns)
+
+### Screenplay pattern
+
+- [Screenplay pattern](https://serenity-js.org/handbook/thinking-in-serenity-js/screenplay-pattern.html)
+
+## Learn about API automation
 
 - [Beaufort fairmont](https://beaufortfairmont.com/webinars/)
 - [OnTestAutomation - Bas Dijkstra](https://www.ontestautomation.com/articles/)
+
+## More best practices/anti patterns to avoid
+
+- [Guidelines from selenium.dev](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/)
+- [Bad practices](https://www.selenium.dev/documentation/en/worst_practices/)

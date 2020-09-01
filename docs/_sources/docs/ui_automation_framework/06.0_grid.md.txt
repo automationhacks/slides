@@ -1,14 +1,11 @@
 # In house vs cloud grid solution
 
-- Create your own grid over VMs/docker containers 🏘
-- Use a cloud solution 🌩
-
 ## In house 🏠
 
 **Benefits** ➕
 
 - Cost effective 🤑
-- Customization for your unique needs 👨‍💻
+- More control and Customization for your companies unique needs 👨‍💻
 
 **Tradeoffs** ➖
 
@@ -22,7 +19,7 @@
 
 - Availability
 - Outsourced Management
-- Large no of platform/browser combination
+- Large no of platform/browser combination with 0 setup investments
 - Monitoring dashboards
 
 **Tradeoffs** ➖
@@ -32,4 +29,4 @@
 
 ### Some Available choices
 
-- SauceLabs, BrowserStack, Applitools Ultrafast grid, Perfecto
+- SauceLabs, BrowserStack, Applitools Ultrafast grid, Perfecto, Headspin ...

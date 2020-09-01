@@ -1,11 +1,41 @@
 # Avoid these anti patterns
 
-- Webdriver methods in tests/page objects
-- Assertions in page objects
-- Long E2E tests with multiple actions and assertions
-- UI tests exposing interactions with web elements
-- Writing too much UI automation 💡 _Less is more_
-- Use UI automation to replace manual testing
-- Avoid using soft assertions
+## Don't put Assertions in page objects 📃
+
+- Asserts should be tests responsibility
+  > Only a single assert that verifies page/elements are loaded properly ✅
+
+## Don't put Webdriver methods in tests/page objects
+
+- Follow DRY (Don't repeat yourself)
+- Put common wrappers in a `BasePage` class
+
+## Long E2E tests with multiple actions and assertions
+
+- Debugging nightmare
+- Might cause bugs to be discovered later if earlier steps fails
+
+## Don't write Tests exposing interactions with web elements
+
+- Tests should be all about the feature/functionality
+- Use page objects 👍
+
+## Writing too much UI automation
+
+- 💡 **Less is more**
+- **DO NOT** test everything from the app
+- Write API/Integration/Unit tests instead
+
+## Use UI automation to replace manual testing
+
+- Exploratory testing will always be irreplaceable
+
+## Avoid using soft assertions
+
+- Write an assert to fail fast
+- Do not write soft assertions
+
+## Using BDD only for gherkin
+
 - Avoid using Cucumber/Serenity/SpecFlow to **do BDD**, if you are not going to follow the
   methodology

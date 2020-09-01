@@ -36,7 +36,7 @@
     
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="References" href="references.html" />
+    <link rel="next" title="Next steps: Where do you go from here" href="09.0_next_steps.html" />
     <link rel="prev" title="Sensible patterns and practices 😇" href="07.0_patterns.html" /> 
 </head>
 
@@ -84,17 +84,27 @@
             
               <p class="caption"><span class="caption-text">Glossary</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="summary.html">How to build an automation framework with selenium : patterns and practices</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">How to build an automation framework with selenium : patterns and practices</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="00_about.html">About me</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html">Introduction to building frameworks 🏗</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02.0_language.html">Choosing a language ✏️</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03.0_test_framework.html">Choosing a test framework tool/library ⚙️</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04.0_reporting.html">Logging/reporting 📈</a></li>
-<li class="toctree-l2"><a class="reference internal" href="05.0_ci.html">CI 🏃🏻‍♂️</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05.0_ci.html">Continuous Integration (CI) 🏃🏻‍♂️</a></li>
 <li class="toctree-l2"><a class="reference internal" href="06.0_grid.html">In house vs cloud grid solution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="07.0_patterns.html">Sensible patterns and practices 😇</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Avoid these anti patterns</a></li>
-<li class="toctree-l2"><a class="reference internal" href="references.html">References</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Avoid these anti patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#don-t-put-assertions-in-page-objects">Don’t put Assertions in page objects 📃</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#don-t-put-webdriver-methods-in-tests-page-objects">Don’t put Webdriver methods in tests/page objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#long-e2e-tests-with-multiple-actions-and-assertions">Long E2E tests with multiple actions and assertions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#don-t-write-tests-exposing-interactions-with-web-elements">Don’t write Tests exposing interactions with web elements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#writing-too-much-ui-automation">Writing too much UI automation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-ui-automation-to-replace-manual-testing">Use UI automation to replace manual testing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#avoid-using-soft-assertions">Avoid using soft assertions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-bdd-only-for-gherkin">Using BDD only for gherkin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="09.0_next_steps.html">Next steps: Where do you go from here</a></li>
 </ul>
 </li>
 </ul>
@@ -143,7 +153,7 @@
     
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
         
-          <li><a href="summary.html">How to build an automation framework with selenium : patterns and practices</a> &raquo;</li>
+          <li><a href="index.html">How to build an automation framework with selenium : patterns and practices</a> &raquo;</li>
         
       <li>Avoid these anti patterns</li>
     
@@ -166,17 +176,65 @@
             
   <div class="section" id="avoid-these-anti-patterns">
 <h1>Avoid these anti patterns<a class="headerlink" href="#avoid-these-anti-patterns" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="don-t-put-assertions-in-page-objects">
+<h2>Don’t put Assertions in page objects 📃<a class="headerlink" href="#don-t-put-assertions-in-page-objects" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Asserts should be tests responsibility</p>
+<blockquote>
+<div><p>Only a single assert that verifies page/elements are loaded properly ✅</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="don-t-put-webdriver-methods-in-tests-page-objects">
+<h2>Don’t put Webdriver methods in tests/page objects<a class="headerlink" href="#don-t-put-webdriver-methods-in-tests-page-objects" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Webdriver methods in tests/page objects</p></li>
-<li><p>Assertions in page objects</p></li>
-<li><p>Long E2E tests with multiple actions and assertions</p></li>
-<li><p>UI tests exposing interactions with web elements</p></li>
-<li><p>Writing too much UI automation 💡 <em>Less is more</em></p></li>
-<li><p>Use UI automation to replace manual testing</p></li>
-<li><p>Avoid using soft assertions</p></li>
+<li><p>Follow DRY (Don’t repeat yourself)</p></li>
+<li><p>Put common wrappers in a <code class="docutils literal notranslate"><span class="pre">BasePage</span></code> class</p></li>
+</ul>
+</div>
+<div class="section" id="long-e2e-tests-with-multiple-actions-and-assertions">
+<h2>Long E2E tests with multiple actions and assertions<a class="headerlink" href="#long-e2e-tests-with-multiple-actions-and-assertions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Debugging nightmare</p></li>
+<li><p>Might cause bugs to be discovered later if earlier steps fails</p></li>
+</ul>
+</div>
+<div class="section" id="don-t-write-tests-exposing-interactions-with-web-elements">
+<h2>Don’t write Tests exposing interactions with web elements<a class="headerlink" href="#don-t-write-tests-exposing-interactions-with-web-elements" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Tests should be all about the feature/functionality</p></li>
+<li><p>Use page objects 👍</p></li>
+</ul>
+</div>
+<div class="section" id="writing-too-much-ui-automation">
+<h2>Writing too much UI automation<a class="headerlink" href="#writing-too-much-ui-automation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>💡 <strong>Less is more</strong></p></li>
+<li><p><strong>DO NOT</strong> test everything from the app</p></li>
+<li><p>Write API/Integration/Unit tests instead</p></li>
+</ul>
+</div>
+<div class="section" id="use-ui-automation-to-replace-manual-testing">
+<h2>Use UI automation to replace manual testing<a class="headerlink" href="#use-ui-automation-to-replace-manual-testing" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Exploratory testing will always be irreplaceable</p></li>
+</ul>
+</div>
+<div class="section" id="avoid-using-soft-assertions">
+<h2>Avoid using soft assertions<a class="headerlink" href="#avoid-using-soft-assertions" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Write an assert to fail fast</p></li>
+<li><p>Do not write soft assertions</p></li>
+</ul>
+</div>
+<div class="section" id="using-bdd-only-for-gherkin">
+<h2>Using BDD only for gherkin<a class="headerlink" href="#using-bdd-only-for-gherkin" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
 <li><p>Avoid using Cucumber/Serenity/SpecFlow to <strong>do BDD</strong>, if you are not going to follow the
 methodology</p></li>
 </ul>
+</div>
 </div>
 
 
@@ -187,7 +245,7 @@ methodology</p></li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="references.html" class="btn btn-neutral float-right" title="References" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="09.0_next_steps.html" class="btn btn-neutral float-right" title="Next steps: Where do you go from here" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="07.0_patterns.html" class="btn btn-neutral float-left" title="Sensible patterns and practices 😇" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

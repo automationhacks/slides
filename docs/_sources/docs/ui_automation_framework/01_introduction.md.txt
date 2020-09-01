@@ -14,9 +14,4 @@
 - Definitive guide for framework building
 - Perfect advice for all scenarios and contexts
 
-## What editor/font/theme is that
-
-- Editor: VS Code
-- Theme: Github light
-- Font: Menlo
-- `:emojisense:` extension 😉
+![Selenium framework](images/selenium_ui_framework.jpg)

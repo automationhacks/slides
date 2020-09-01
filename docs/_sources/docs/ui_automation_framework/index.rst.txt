@@ -14,4 +14,4 @@ How to build an automation framework with selenium : patterns and practices
    06.0_grid.md
    07.0_patterns.md
    08.0_anti_patterns.md
-   references.md
+   09.0_next_steps.md
