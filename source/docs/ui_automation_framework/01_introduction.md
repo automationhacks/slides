@@ -13,3 +13,5 @@
 - In-depth discussion about selenium's API
 - Definitive guide for framework building
 - Perfect advice for all scenarios and contexts
+
+![Selenium framework](images/selenium_ui_framework.jpg)
