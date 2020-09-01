@@ -3,16 +3,16 @@
 Available choices
 
 - Statically typed: Java, Kotlin, C#, TypeScript
-- Dynamic: Python, JS, Ruby
+- Dynamically typed: Python, JS, Ruby
 
 ## How to decide 🤔
 
-- Choose language that **devs also use**
+- Try to choose a language that **devs also use**
   - Y? Less friction in getting devs to contribute
     > Quality **should be** the whole team's responsibility
 - Easy to learn and to find people in the industry with know how
   - Y? Easy to onboard new members in the team
-- Undergoing active development, thriving and supportive community
+- Undergoing active development and has a thriving and supportive community
 - Well defined ecosystem of tools and libraries
 
 ## Can't really go wrong with 👍

@@ -2,9 +2,10 @@
 
 Read/follow these articles to gain more context.
 
-> Learn constantly, experiment and figure out what works best for you
+> Learn constantly, experiment and apply these in your automation and develop your own heuristics.
+> You can do it. All the best 👍
 
-## Nikolay Advolodkin
+## On Automation - Nikolay Advolodkin
 
 - [Automation pyramid](https://www.youtube.com/watch?v=90Afyo0bI7M)
 - [Automation patterns and anti patterns](https://ultimateqa.com/automation-patterns-antipatterns/)
@@ -32,6 +33,7 @@ Read/follow these articles to gain more context.
 
 - [Page object models - Selenium.dev](https://www.selenium.dev/documentation/en/guidelines_and_recommendations/page_object_models/)
 - [Tips for healthy page objects - Angie jones](https://angiejones.tech/page-object-model/)
+- [Page object - Martinfowler.com](https://martinfowler.com/bliki/PageObject.html)
 
 ### Page factory
 

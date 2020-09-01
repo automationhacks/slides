@@ -7,12 +7,12 @@
 
 ## Don't put Webdriver methods in tests/page objects
 
-- Follow DRY (Don't repeat yourself)
+- Follow DRY (Don't repeat yourself) ⚔️ 🔁
 - Put common wrappers in a `BasePage` class
 
 ## Long E2E tests with multiple actions and assertions
 
-- Debugging nightmare
+- Debugging nightmare 😱
 - Might cause bugs to be discovered later if earlier steps fails
 
 ## Don't write Tests exposing interactions with web elements
@@ -22,9 +22,10 @@
 
 ## Writing too much UI automation
 
-- 💡 **Less is more**
+> 💡 **Less is more**
+
 - **DO NOT** test everything from the app
-- Write API/Integration/Unit tests instead
+- Prefer to write API/Integration/Unit tests instead
 
 ## Use UI automation to replace manual testing
 

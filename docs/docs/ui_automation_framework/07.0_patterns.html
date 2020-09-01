@@ -94,8 +94,8 @@
 <li class="toctree-l2"><a class="reference internal" href="06.0_grid.html">In house vs cloud grid solution</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sensible patterns and practices 😇</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#atomic-tests">Atomic tests ⚛️</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#use-api-or-db-for-data-setup-teardown">Use <strong>API or DB</strong> for data setup/teardown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#arrange-act-assert">Arrange act assert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-api-or-db-for-data-setup-teardown">Use <strong>API ⚙️ or DB</strong> for data setup/teardown</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#arrange-act-assert">Arrange act assert ❤️</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-tests-in-parallel-from-the-start">Run tests in <strong>parallel</strong> from the start 🏃 🏃 🏃</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#page-object">Page object</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fluent-pattern">Fluent pattern 🏃</a></li>
@@ -181,11 +181,11 @@
 <h2>Atomic tests ⚛️<a class="headerlink" href="#atomic-tests" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Write targeted tests</p></li>
-<li><p>Ideally, Max 2 assertions per test 2️⃣</p></li>
+<li><p>Ideally, &lt;= 2 assertions per test 2️⃣</p></li>
 <li><p>Use API/Inject JS/Cookies/Modify DB to set application state ⏩</p></li>
 <li><p>Outcome of one test should not cause another to fail</p>
 <ul>
-<li><p>Don’t chain tests</p></li>
+<li><p>Don’t chain tests 🚯</p></li>
 </ul>
 </li>
 </ul>
@@ -195,14 +195,14 @@
 </div></blockquote>
 </div>
 <div class="section" id="use-api-or-db-for-data-setup-teardown">
-<h2>Use <strong>API or DB</strong> for data setup/teardown<a class="headerlink" href="#use-api-or-db-for-data-setup-teardown" title="Permalink to this headline">¶</a></h2>
+<h2>Use <strong>API ⚙️ or DB</strong> for data setup/teardown<a class="headerlink" href="#use-api-or-db-for-data-setup-teardown" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Selenium is not a silver bullet</p></li>
+<li><p><strong>Realize:</strong> Selenium is not a silver bullet</p></li>
 <li><p>Use your apps API/cookies/DB to setup and teardown data</p></li>
 </ul>
 </div>
 <div class="section" id="arrange-act-assert">
-<h2>Arrange act assert<a class="headerlink" href="#arrange-act-assert" title="Permalink to this headline">¶</a></h2>
+<h2>Arrange act assert ❤️<a class="headerlink" href="#arrange-act-assert" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Setup data/state</p></li>
 <li><p>Perform a test</p></li>
@@ -210,14 +210,14 @@
 <li><p><strong>Cleanup</strong></p></li>
 </ul>
 <blockquote>
-<div><p><strong>Given/When/Then</strong> is same in spirit</p>
+<div><p><strong>Given/When/Then</strong> is similar in spirit</p>
 </div></blockquote>
 </div>
 <div class="section" id="run-tests-in-parallel-from-the-start">
 <h2>Run tests in <strong>parallel</strong> from the start 🏃 🏃 🏃<a class="headerlink" href="#run-tests-in-parallel-from-the-start" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Atomic tests work great in parallel 🤝</p></li>
-<li><p>New webdriver instance for every test 💯</p></li>
+<li><p>Create a new webdriver instance for every test 💯</p></li>
 <li><p>Do <strong>NOT</strong> use static keyword/shared state</p></li>
 </ul>
 </div>
@@ -229,13 +229,11 @@
 <li><p>Compose multiple into common page</p></li>
 </ul>
 </li>
-<li><p>Well named, and specify intent</p></li>
-<li><p>Don’t have webdriver API calls directly in page objects,</p>
-<ul>
-<li><p>Instead inherit/compose from a base page</p></li>
+<li><p>Name them well which clarify intent</p></li>
 </ul>
-</li>
-</ul>
+<blockquote>
+<div><p>If you have WebDriver APIs in your test methods, You’re Doing It Wrong. – Simon Stewart.</p>
+</div></blockquote>
 </div>
 <div class="section" id="fluent-pattern">
 <h2>Fluent pattern 🏃<a class="headerlink" href="#fluent-pattern" title="Permalink to this headline">¶</a></h2>
@@ -315,7 +313,7 @@
 <div class="section" id="screenplay-pattern">
 <h2>Screenplay pattern<a class="headerlink" href="#screenplay-pattern" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li></li>
+<li><p>Follows SOLID principles and takes a user centric view of writing automated acceptance tests</p></li>
 </ul>
 </div>
 <div class="section" id="builder-pattern">

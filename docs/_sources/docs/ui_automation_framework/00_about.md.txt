@@ -6,9 +6,9 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 
 - 🏡 Bengaluru, India 🇮🇳
 - Lead SDET at Gojek
-- Love️ to code and build test frameworks in Kotlin, Python, Java
-- Love exploratory testing and _test automation_
-- Full stack (Web, mobile, API)
+- ❤️ to code and build test frameworks in Kotlin, Python, Java
+- ❤️ exploratory testing and _all things test automation_
+- Experience across different stacks in Web, mobile and API
 
 ## How to find me
 

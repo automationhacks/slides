@@ -29,4 +29,8 @@
 
 ### Some Available choices
 
-- SauceLabs, BrowserStack, Applitools Ultrafast grid, Perfecto, Headspin ...
+- SauceLabs
+- BrowserStack
+- Applitools Ultrafast grid
+- Perfecto
+- HeadSpin ...
