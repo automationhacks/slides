@@ -181,13 +181,8 @@
 <h2>Atomic tests ⚛️<a class="headerlink" href="#atomic-tests" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Write targeted tests</p></li>
-<li><p>Ideally, &lt;= 2 assertions per test 2️⃣</p></li>
-<li><p>Use API/Inject JS/Cookies/Modify DB to set application state ⏩</p></li>
-<li><p>Outcome of one test should not cause another to fail</p>
-<ul>
-<li><p>Don’t chain tests 🚯</p></li>
-</ul>
-</li>
+<li><p>Ideally, no more than 2 assertions per test 2️⃣</p></li>
+<li><p>Outcome of one test should not cause another to fail (No chaining 🚳)</p></li>
 </ul>
 <blockquote>
 <div><p>💡Follow
@@ -197,8 +192,7 @@
 <div class="section" id="use-api-or-db-for-data-setup-teardown">
 <h2>Use <strong>API ⚙️ or DB</strong> for data setup/teardown<a class="headerlink" href="#use-api-or-db-for-data-setup-teardown" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p><strong>Realize:</strong> Selenium is not a silver bullet</p></li>
-<li><p>Use your apps API/cookies/DB to setup and teardown data</p></li>
+<li><p>Use API/Inject JS/Cookies/Modify DB to set application state ⏩</p></li>
 </ul>
 </div>
 <div class="section" id="arrange-act-assert">

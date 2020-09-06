@@ -19,7 +19,6 @@ from recommonmark.transform import AutoStructify
 import sphinx_rtd_theme
 
 # sphinx-themes
-html_theme = 'sphinx_rtd_theme'
 
 
 # -- Project information -----------------------------------------------------
@@ -68,6 +67,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 # html_theme = "alabaster"
+html_theme = 'sphinx_rtd_theme'
 
 source_suffix = [".rst", ".md"]
 
