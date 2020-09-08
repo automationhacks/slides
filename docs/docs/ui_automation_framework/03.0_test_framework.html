@@ -90,7 +90,11 @@
 <li class="toctree-l2"><a class="reference internal" href="02.0_language.html">Choosing a language ✏️</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Choosing a test framework tool/library ⚙️</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#xunit-style">xUnit style 🤖</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#bdd">BDD 🤝</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bdd">BDD 🤝</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#imperative">Imperative</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#declarative">Declarative</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#choosing-an-assertion-library">Choosing an assertion library 🕵🏻‍♂️</a></li>
 </ul>
 </li>
@@ -235,11 +239,31 @@
 <li><p>Easy to fall into the trap of writing feature files that are <strong>imperative</strong> instead of
 <strong>declarative</strong></p></li>
 </ul>
+<div class="section" id="imperative">
+<h3>Imperative<a class="headerlink" href="#imperative" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Given I open a browser
+And I navigate to http://example.com/login
+When I type in the username field bob97
+And I type in the password field F1d0
+And I click on Submit button
+Then I should see the message Welcome Back Bob
+</pre></div>
+</div>
+</div>
+<div class="section" id="declarative">
+<h3>Declarative<a class="headerlink" href="#declarative" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Given I am on the Login Page
+When I sign in with correct credentials
+Then I should see a welcome message
+</pre></div>
+</div>
+<p><a class="reference external" href="https://wiki.saucelabs.com/display/DOCS/Best+Practices+for+Running+Tests">Source: Sauce labs best practices for running tests</a></p>
 <blockquote>
 <div><p>If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
 Reference:
 <a class="reference external" href="https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/">The worlds most misunderstood collaboration tool</a></p>
 </div></blockquote>
+</div>
 </div>
 <div class="section" id="choosing-an-assertion-library">
 <h2>Choosing an assertion library 🕵🏻‍♂️<a class="headerlink" href="#choosing-an-assertion-library" title="Permalink to this headline">¶</a></h2>
