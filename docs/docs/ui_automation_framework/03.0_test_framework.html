@@ -95,7 +95,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#declarative">Declarative</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#choosing-an-assertion-library">Choosing an assertion library 🕵🏻‍♂️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#choosing-an-fluent-assertion-library">Choosing an fluent assertion library 🕵🏻‍♂️</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="04.0_reporting.html">Logging/reporting 📈</a></li>
@@ -175,7 +175,6 @@
             
   <div class="section" id="choosing-a-test-framework-tool-library">
 <h1>Choosing a test framework tool/library ⚙️<a class="headerlink" href="#choosing-a-test-framework-tool-library" title="Permalink to this headline">¶</a></h1>
-<p>Some of the available tool choices</p>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -196,22 +195,17 @@
 <td>Behave, pytest-bdd</td>
 </tr>
 </tbody>
-</table><p>Think hard about … ! 🤔❗️</p>
+</table><p>Think ! 🤔️ Who would be the primary <strong>author</strong> of these tests?</p>
 <ul class="simple">
-<li><p>Who would be the primary <strong>author</strong> of these tests?</p>
-<ul>
-<li><p>Are they Developers, Automation engineers (Choose xUnit)</p></li>
-<li><p>Are they Product managers (PM), Manual testers (BDD <strong>can be</strong> an option)</p></li>
-</ul>
-</li>
+<li><p>Developers, Automation engineers (Choose xUnit)?</p></li>
+<li><p>Product managers (PM), Manual testers (BDD <strong>can be</strong> an option)?</p></li>
 </ul>
 <div class="section" id="xunit-style">
 <h2>xUnit style 🤖<a class="headerlink" href="#xunit-style" title="Permalink to this headline">¶</a></h2>
 <p><strong>Benefits</strong> ➕</p>
 <ul class="simple">
-<li><p>Fast and less boilerplate</p></li>
-<li><p>Easy setup/tear downs at different levels (Suite, Class, Test)</p></li>
-<li><p>Flexible</p></li>
+<li><p>Fast and flexible</p></li>
+<li><p>Setup/tear downs at different levels (Suite, Class, Test)</p></li>
 <li><p>Easy to <strong>data drive/parallelize</strong> tests</p></li>
 </ul>
 <p><strong>Tradeoffs</strong> ➖</p>
@@ -219,25 +213,27 @@
 <li><p>Can be less readable (if not well designed)</p></li>
 </ul>
 <blockquote>
-<div><p>Tip: 💡 Write tests in <a class="reference external" href="http://wiki.c2.com/?ArrangeActAssert">arrange-act-assert</a> pattern.</p>
+<div><p>Tip: 💡 Write tests using <a class="reference external" href="http://wiki.c2.com/?ArrangeActAssert">arrange-act-assert</a> pattern.</p>
 </div></blockquote>
 </div>
 <div class="section" id="bdd">
 <h2>BDD 🤝<a class="headerlink" href="#bdd" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
+Reference:
+<a class="reference external" href="https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/">The worlds most misunderstood collaboration tool</a></p>
+</div></blockquote>
 <p><strong>Benefits</strong> ➕</p>
 <ul class="simple">
 <li><p>Readable (Gherkin syntax with <code class="docutils literal notranslate"><span class="pre">Given/When/Then/And</span></code>)</p></li>
-<li><p>Accessible to PM/Test engineers</p></li>
-<li><p>Provides a layer to allow non-coders to also contribute</p></li>
-<li><p>Generally a bit more readable test results report</p></li>
+<li><p>Provides a layer to allow non-coders (PM/Manual test engineers) to also contribute</p></li>
+<li><p>More readable test results report</p></li>
 </ul>
 <p><strong>Tradeoffs</strong> ➖</p>
 <ul class="simple">
-<li><p>Maintaining a BDD layer (feature files, step definitions) in most cases can be an overhead</p></li>
+<li><p>Maintaining a BDD layer (feature files, step definitions) can be an overhead</p></li>
 <li><p>Less flexible</p></li>
-<li><p>Difficult to implement parallelization (can only do at Feature file level)</p></li>
-<li><p>Easy to fall into the trap of writing feature files that are <strong>imperative</strong> instead of
-<strong>declarative</strong></p></li>
+<li><p>(Trap 👺) Feature files can be <strong>imperative</strong> instead of<strong>declarative</strong></p></li>
 </ul>
 <div class="section" id="imperative">
 <h3>Imperative<a class="headerlink" href="#imperative" title="Permalink to this headline">¶</a></h3>
@@ -258,21 +254,13 @@ Then I should see a welcome message
 </pre></div>
 </div>
 <p><a class="reference external" href="https://wiki.saucelabs.com/display/DOCS/Best+Practices+for+Running+Tests">Source: Sauce labs best practices for running tests</a></p>
-<blockquote>
-<div><p>If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
-Reference:
-<a class="reference external" href="https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/">The worlds most misunderstood collaboration tool</a></p>
-</div></blockquote>
 </div>
 </div>
-<div class="section" id="choosing-an-assertion-library">
-<h2>Choosing an assertion library 🕵🏻‍♂️<a class="headerlink" href="#choosing-an-assertion-library" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="choosing-an-fluent-assertion-library">
+<h2>Choosing an fluent assertion library 🕵🏻‍♂️<a class="headerlink" href="#choosing-an-fluent-assertion-library" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>Let’s not reinvent the wheel ☸️ shall we? 😄</p>
 </div></blockquote>
-<ul class="simple">
-<li><p>Choose a good fluent assertion lib to increase readability</p></li>
-</ul>
 <table border="1" class="docutils">
 <thead>
 <tr>
@@ -285,16 +273,9 @@ Reference:
 <td>Google Truth ⭐️</td>
 <td>assertpy 🌟</td>
 </tr>
-<tr>
-<td>Hamcrest</td>
-<td></td>
-</tr>
-<tr>
-<td>Native TestNG/JUnit</td>
-<td></td>
-</tr>
 </tbody>
-</table></div>
+</table><p>Other choices: Hamcrest, Native JUnit or TestNG</p>
+</div>
 </div>
 
 

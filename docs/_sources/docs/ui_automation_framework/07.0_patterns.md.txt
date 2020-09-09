@@ -3,12 +3,12 @@
 ## Atomic tests ⚛️
 
 - Write targeted tests
-- Ideally, no more than 2 assertions per test 2️⃣
-- Outcome of one test should not cause another to fail (No chaining 🚳)
+- No more than 2 assertions per test 2️⃣
+- Outcome of one test should not cause another to fail
 
 > 💡Follow
-> [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html) =
-> Targeted, Reliable, Informative, Maintainable, Speedy 👍
+> [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html) =>
+> Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, Ministry of testing
 
 ## Use **API ⚙️ or DB** for data setup/teardown
 
@@ -21,25 +21,18 @@ Set application state ⏩ using:
 
 ## Arrange act assert ❤️
 
-- Setup data/state
-- Perform a test
-- Assert on the state
-- Cleanup
-
-> Similar in spirit to **Given/When/Then**
+- Setup state => Perform a test => Assert => Cleanup
 
 ## Run tests in **parallel** from the start 🏃 🏃 🏃
 
-- Atomic tests work great in parallel 🤝
-- Create a new webdriver instance for every test 💯
-- Wrap it with `ThreadLocal` (JVM)
-- Do **NOT** use static keyword/shared state
+- Atomic tests + parallel 🤝
+- Create new webdriver instance for every test (On JVM Wrap it with `ThreadLocal`)
+- Don't use **static keyword/shared state**
 
 ## Page object
 
 - Write page objects for **components** within pages
-  - Compose multiple into common page
-- Name them well which clarify intent
+- Naming that clarifies intent
 
 ## Fluent pattern 🏃
 

@@ -4,33 +4,29 @@
 
 **Benefits** ➕
 
-- Cost effective 🤑
-- More control and Customization for your companies unique needs 👨‍💻
+- Less Cost 🤑
+- More control and Customization 👨‍💻
 
 **Tradeoffs** ➖
 
 - Maintenance overhead 🙍🏻‍♂️
-- Need dedicated team of engineers to maintain
-- Limit to how many VM/containers can be setup in house
+- Need dedicated team to maintain
+- VM/containers can be limited
 
 ## Cloud 🌩
 
 **Benefits** ➕
 
-- Availability
-- Outsourced Management
-- Large no of platform/browser combination with 0 setup investments
-- Monitoring dashboards
+- Availability and outsourced Management
+- Large no of platform/browser combinations
+- Monitoring/dashboards
 
 **Tradeoffs** ➖
 
-- Recurring cost 💸
+- More Cost 💸
+- Network latency 🚶
 - Data Security 🖥
 
 ### Some Available choices
 
-- SauceLabs
-- BrowserStack
-- Applitools Ultrafast grid
-- Perfecto
-- HeadSpin ...
+- SauceLabs, BrowserStack, Applitools Ultrafast grid, Perfecto, HeadSpin ...

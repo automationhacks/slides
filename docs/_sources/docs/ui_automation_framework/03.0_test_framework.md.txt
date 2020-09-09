@@ -1,49 +1,46 @@
 # Choosing a test framework tool/library ⚙️
 
-Some of the available tool choices
-
 | Type        | JVM (Java/Kotlin) | Python             |
 | ----------- | ----------------- | ------------------ |
 | xUnit style | JUnit, TestNG     | pytest, unittest   |
 | BDD         | Cucumber          | Behave, pytest-bdd |
 
-Think hard about ... ! 🤔❗️
+Think ! 🤔️ Who would be the primary **author** of these tests?
 
-- Who would be the primary **author** of these tests?
-  - Are they Developers, Automation engineers (Choose xUnit)
-  - Are they Product managers (PM), Manual testers (BDD **can be** an option)
+- Developers, Automation engineers (Choose xUnit)?
+- Product managers (PM), Manual testers (BDD **can be** an option)?
 
 ## xUnit style 🤖
 
 **Benefits** ➕
 
-- Fast and less boilerplate
-- Easy setup/tear downs at different levels (Suite, Class, Test)
-- Flexible
+- Fast and flexible
+- Setup/tear downs at different levels (Suite, Class, Test)
 - Easy to **data drive/parallelize** tests
 
 **Tradeoffs** ➖
 
 - Can be less readable (if not well designed)
 
-> Tip: 💡 Write tests in [arrange-act-assert](http://wiki.c2.com/?ArrangeActAssert) pattern.
+> Tip: 💡 Write tests using [arrange-act-assert](http://wiki.c2.com/?ArrangeActAssert) pattern.
 
 ## BDD 🤝
+
+> If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
+> Reference:
+> [The worlds most misunderstood collaboration tool](https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/)
 
 **Benefits** ➕
 
 - Readable (Gherkin syntax with `Given/When/Then/And`)
-- Accessible to PM/Test engineers
-- Provides a layer to allow non-coders to also contribute
-- Generally a bit more readable test results report
+- Provides a layer to allow non-coders (PM/Manual test engineers) to also contribute
+- More readable test results report
 
 **Tradeoffs** ➖
 
-- Maintaining a BDD layer (feature files, step definitions) in most cases can be an overhead
+- Maintaining a BDD layer (feature files, step definitions) can be an overhead
 - Less flexible
-- Difficult to implement parallelization (can only do at Feature file level)
-- Easy to fall into the trap of writing feature files that are **imperative** instead of
-  **declarative**
+- (Trap 👺) Feature files can be **imperative** instead of**declarative**
 
 ### Imperative
 
@@ -66,18 +63,12 @@ Then I should see a welcome message
 
 [Source: Sauce labs best practices for running tests](https://wiki.saucelabs.com/display/DOCS/Best+Practices+for+Running+Tests)
 
-> If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
-> Reference:
-> [The worlds most misunderstood collaboration tool](https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/)
-
-## Choosing an assertion library 🕵🏻‍♂️
+## Choosing an fluent assertion library 🕵🏻‍♂️
 
 > Let's not reinvent the wheel ☸️ shall we? 😄
 
-- Choose a good fluent assertion lib to increase readability
+| Java/Kotlin      | Python      |
+| ---------------- | ----------- |
+| Google Truth ⭐️ | assertpy 🌟 |
 
-| Java/Kotlin         | Python      |
-| ------------------- | ----------- |
-| Google Truth ⭐️    | assertpy 🌟 |
-| Hamcrest            |             |
-| Native TestNG/JUnit |             |
+Other choices: Hamcrest, Native JUnit or TestNG

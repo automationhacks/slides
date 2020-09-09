@@ -9,7 +9,7 @@
 - Setup smoke tests for every build
 - Setup regression on a nightly basis
 
-> Tip: 💡Make sure the suite is always healthy 🏥with less false positives/negatives
+> Tip: 💡 Keep test suites healthy 🏥
 
 ## Available choices
 

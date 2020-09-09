@@ -181,13 +181,13 @@
 <h2>Atomic tests ⚛️<a class="headerlink" href="#atomic-tests" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Write targeted tests</p></li>
-<li><p>Ideally, no more than 2 assertions per test 2️⃣</p></li>
-<li><p>Outcome of one test should not cause another to fail (No chaining 🚳)</p></li>
+<li><p>No more than 2 assertions per test 2️⃣</p></li>
+<li><p>Outcome of one test should not cause another to fail</p></li>
 </ul>
 <blockquote>
 <div><p>💡Follow
-<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a> =
-Targeted, Reliable, Informative, Maintainable, Speedy 👍</p>
+<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a> =&gt;
+Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, Ministry of testing</p>
 </div></blockquote>
 </div>
 <div class="section" id="use-api-or-db-for-data-setup-teardown">
@@ -203,33 +203,22 @@ Targeted, Reliable, Informative, Maintainable, Speedy 👍</p>
 <div class="section" id="arrange-act-assert">
 <h2>Arrange act assert ❤️<a class="headerlink" href="#arrange-act-assert" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Setup data/state</p></li>
-<li><p>Perform a test</p></li>
-<li><p>Assert on the state</p></li>
-<li><p>Cleanup</p></li>
+<li><p>Setup state =&gt; Perform a test =&gt; Assert =&gt; Cleanup</p></li>
 </ul>
-<blockquote>
-<div><p>Similar in spirit to <strong>Given/When/Then</strong></p>
-</div></blockquote>
 </div>
 <div class="section" id="run-tests-in-parallel-from-the-start">
 <h2>Run tests in <strong>parallel</strong> from the start 🏃 🏃 🏃<a class="headerlink" href="#run-tests-in-parallel-from-the-start" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Atomic tests work great in parallel 🤝</p></li>
-<li><p>Create a new webdriver instance for every test 💯</p></li>
-<li><p>Wrap it with <code class="docutils literal notranslate"><span class="pre">ThreadLocal</span></code> (JVM)</p></li>
-<li><p>Do <strong>NOT</strong> use static keyword/shared state</p></li>
+<li><p>Atomic tests + parallel 🤝</p></li>
+<li><p>Create new webdriver instance for every test (On JVM Wrap it with <code class="docutils literal notranslate"><span class="pre">ThreadLocal</span></code>)</p></li>
+<li><p>Don’t use <strong>static keyword/shared state</strong></p></li>
 </ul>
 </div>
 <div class="section" id="page-object">
 <h2>Page object<a class="headerlink" href="#page-object" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Write page objects for <strong>components</strong> within pages</p>
-<ul>
-<li><p>Compose multiple into common page</p></li>
-</ul>
-</li>
-<li><p>Name them well which clarify intent</p></li>
+<li><p>Write page objects for <strong>components</strong> within pages</p></li>
+<li><p>Naming that clarifies intent</p></li>
 </ul>
 </div>
 <div class="section" id="fluent-pattern">

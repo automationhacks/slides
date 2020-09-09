@@ -2,14 +2,13 @@
 
 ## What this talk is about ✅
 
-- How do we build a framework using selenium
-- Some **considerations** while building a framework
+- How do we build a framework?
+- Some **considerations**
 - Useful **design patterns**
 - Anti patterns to **avoid**
 
 ## What this talk is not about 🙅🏻‍♂️
 
-- What selenium is?
 - In-depth discussion about selenium's API
-- Definitive guide for framework building
+- Definitive guide
 - Perfect advice for all scenarios and contexts

@@ -5,7 +5,7 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 ## Who am I
 
 - 🏡 Bengaluru, India 🇮🇳
-- Lead Quality engineer at Gojek
+- Test Automation engineer at Gojek
 - Polyglot programmer and build test frameworks in Kotlin, Python, Java
 - Fan of exploratory testing and _test automation_
 - Experience with Web, mobile and API
