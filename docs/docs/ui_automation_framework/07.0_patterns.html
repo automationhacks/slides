@@ -186,13 +186,18 @@
 </ul>
 <blockquote>
 <div><p>💡Follow
-<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a></p>
+<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a> =
+Targeted, Reliable, Informative, Maintainable, Speedy 👍</p>
 </div></blockquote>
 </div>
 <div class="section" id="use-api-or-db-for-data-setup-teardown">
 <h2>Use <strong>API ⚙️ or DB</strong> for data setup/teardown<a class="headerlink" href="#use-api-or-db-for-data-setup-teardown" title="Permalink to this headline">¶</a></h2>
+<p>Set application state ⏩ using:</p>
 <ul class="simple">
-<li><p>Use API/Inject JS/Cookies/Modify DB to set application state ⏩</p></li>
+<li><p>API</p></li>
+<li><p>Inject JS</p></li>
+<li><p>Cookies</p></li>
+<li><p>Modify DB</p></li>
 </ul>
 </div>
 <div class="section" id="arrange-act-assert">
@@ -201,10 +206,10 @@
 <li><p>Setup data/state</p></li>
 <li><p>Perform a test</p></li>
 <li><p>Assert on the state</p></li>
-<li><p><strong>Cleanup</strong></p></li>
+<li><p>Cleanup</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Given/When/Then</strong> is similar in spirit</p>
+<div><p>Similar in spirit to <strong>Given/When/Then</strong></p>
 </div></blockquote>
 </div>
 <div class="section" id="run-tests-in-parallel-from-the-start">
@@ -212,6 +217,7 @@
 <ul class="simple">
 <li><p>Atomic tests work great in parallel 🤝</p></li>
 <li><p>Create a new webdriver instance for every test 💯</p></li>
+<li><p>Wrap it with <code class="docutils literal notranslate"><span class="pre">ThreadLocal</span></code> (JVM)</p></li>
 <li><p>Do <strong>NOT</strong> use static keyword/shared state</p></li>
 </ul>
 </div>
@@ -225,9 +231,6 @@
 </li>
 <li><p>Name them well which clarify intent</p></li>
 </ul>
-<blockquote>
-<div><p>If you have WebDriver APIs in your test methods, You’re Doing It Wrong. – Simon Stewart.</p>
-</div></blockquote>
 </div>
 <div class="section" id="fluent-pattern">
 <h2>Fluent pattern 🏃<a class="headerlink" href="#fluent-pattern" title="Permalink to this headline">¶</a></h2>
@@ -308,6 +311,8 @@
 <h2>Screenplay pattern<a class="headerlink" href="#screenplay-pattern" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Follows SOLID principles and takes a user centric view of writing automated acceptance tests</p></li>
+<li><p>Check out
+<a class="reference external" href="https://serenity-bdd.github.io/theserenitybook/latest/serenity-screenplay.html">Serenity BDD</a></p></li>
 </ul>
 </div>
 <div class="section" id="builder-pattern">
