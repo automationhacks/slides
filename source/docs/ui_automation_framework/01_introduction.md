@@ -2,7 +2,7 @@
 
 ## What this talk is about ✅
 
-- How do we build a framework?
+- How? Building blocks?
 - Some **considerations**
 - Useful **design patterns**
 - Anti patterns to **avoid**

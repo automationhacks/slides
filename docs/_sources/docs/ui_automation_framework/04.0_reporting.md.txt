@@ -3,7 +3,7 @@
 ## How to choose 🤔
 
 - Easy to see exception **stack traces**
-- Spot failed assertions and associated logs quickly
+- Quickly see failed assertions and associated inputs/logs quickly
 - Good overview of **pass/fail/skipped** metrics
 - Should have **historical results** comparison
 

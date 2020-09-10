@@ -48,6 +48,10 @@
 
 - [Arrange act assert](http://wiki.c2.com/?ArrangeActAssert)
 
+### Builder
+
+- [Builder pattern](https://refactoring.guru/design-patterns/builder)
+
 ## Learn about API automation
 
 - [Beaufort fairmont](https://beaufortfairmont.com/webinars/)

@@ -1,7 +1,7 @@
 # Continuous Integration (CI) 🏃🏻‍♂️
 
 - Jenkins 👨🏻‍🍳
-- You project context and infra used
+- CI Used by your project/org
 
 ## Key practices
 
@@ -9,8 +9,8 @@
 - Setup smoke tests for every build
 - Setup regression on a nightly basis
 
-> Tip: 💡 Keep test suites healthy 🏥
+> Tip: 💡 Keep test suites always healthy 🏥
 
 ## Available choices
 
-- Azure pipelines, GitLab, TravisCI, SemaphoreCI, CircleCI, Bamboo, Code-ship ...
+- Azure pipelines, GitLab, TravisCI, CircleCI, ...
