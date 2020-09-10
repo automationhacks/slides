@@ -36,9 +36,15 @@
 - [Tips for healthy page objects - Angie jones](https://angiejones.tech/page-object-model/)
 - [Page object - Martinfowler.com](https://martinfowler.com/bliki/PageObject.html)
 
+### Fluent pattern
+
+- [Fluent Interface - Martin Fowler](https://martinfowler.com/bliki/FluentInterface.html)
+- [Fun With Fluent Testing - Andrew Krug](https://www.youtube.com/watch?v=bIA4lAA5fz0)
+
 ### Page factory
 
 - [Selenium design patterns - Dzone](https://dzone.com/articles/selenium-design-patterns)
+- [CacheLookup in Page factory](https://www.toolsqa.com/selenium-webdriver/cachelookup-in-pageobjectmodel/)
 
 ### Screenplay pattern
 

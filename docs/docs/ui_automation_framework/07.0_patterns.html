@@ -94,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="06.0_grid.html">In house vs cloud</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Sensible patterns and practices 😇</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#atomic-tests">Atomic tests ⚛️</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#use-explicit-waits">Use explicit waits 🛑</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#use-api-or-db-for-data-setup-teardown">Use <strong>API ⚙️ or DB</strong> for data setup/teardown</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#arrange-act-assert">Arrange act assert ❤️</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#run-tests-in-parallel-from-the-start">Run tests in <strong>parallel</strong> from the start 🏃 🏃 🏃</a></li>
@@ -186,9 +187,15 @@
 </ul>
 <blockquote>
 <div><p>💡Follow
-<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a> =&gt;
-Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, Ministry of testing</p>
+<a class="reference external" href="https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html">TRIMS</a>
+👍- Richard Bradshaw, Ministry of testing</p>
 </div></blockquote>
+</div>
+<div class="section" id="use-explicit-waits">
+<h2>Use explicit waits 🛑<a class="headerlink" href="#use-explicit-waits" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Avoid writing hardcoded sleeps/implicit waits</p></li>
+</ul>
 </div>
 <div class="section" id="use-api-or-db-for-data-setup-teardown">
 <h2>Use <strong>API ⚙️ or DB</strong> for data setup/teardown<a class="headerlink" href="#use-api-or-db-for-data-setup-teardown" title="Permalink to this headline">¶</a></h2>
@@ -210,7 +217,8 @@ Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, M
 <h2>Run tests in <strong>parallel</strong> from the start 🏃 🏃 🏃<a class="headerlink" href="#run-tests-in-parallel-from-the-start" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Atomic tests + parallel 🤝</p></li>
-<li><p>Create new webdriver instance for every test (On JVM Wrap it with <code class="docutils literal notranslate"><span class="pre">ThreadLocal</span></code>)</p></li>
+<li><p>Use Selenium Grid 👍</p></li>
+<li><p>Create a new webdriver instance for every test</p></li>
 <li><p>Don’t use <strong>static keyword/shared state</strong></p></li>
 </ul>
 </div>
@@ -266,8 +274,8 @@ Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, M
 <div class="section" id="page-factory">
 <h2>Page factory<a class="headerlink" href="#page-factory" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Caches looked up elements on instantiation</p></li>
-<li><p>Don’t use for elements that can change (AJAX)</p></li>
+<li><p>Easily specify WebElement/s to be found</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">&#64;CacheLookup</span></code> to keep WebElement for static elements</p></li>
 </ul>
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">HomePage</span> <span class="kd">extends</span> <span class="n">BasePage</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="nf">HomePage</span><span class="p">(</span><span class="n">WebDriver</span> <span class="n">driver</span><span class="p">)</span> <span class="p">{</span>
@@ -299,7 +307,7 @@ Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, M
 <div class="section" id="screenplay-pattern">
 <h2>Screenplay pattern<a class="headerlink" href="#screenplay-pattern" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Follows SOLID principles and takes a user centric view of writing automated acceptance tests</p></li>
+<li><p>Follows <strong>SOLID</strong> principles and takes a user centric view of writing automated acceptance tests</p></li>
 <li><p>Check out
 <a class="reference external" href="https://serenity-bdd.github.io/theserenitybook/latest/serenity-screenplay.html">Serenity BDD</a></p></li>
 </ul>

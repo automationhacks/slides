@@ -7,8 +7,12 @@
 - Outcome of one test should not cause another to fail
 
 > 💡Follow
-> [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html) =>
-> Targeted, Reliable, Informative, Maintainable, Speedy 👍 - Richard Bradshaw, Ministry of testing
+> [TRIMS](https://automationintesting.com/2019/08/trims-automation-in-testing-strategy.html)
+> 👍- Richard Bradshaw, Ministry of testing
+
+## Use explicit waits 🛑
+
+- Avoid writing hardcoded sleeps/implicit waits
 
 ## Use **API ⚙️ or DB** for data setup/teardown
 
@@ -26,7 +30,8 @@ Set application state ⏩ using:
 ## Run tests in **parallel** from the start 🏃 🏃 🏃
 
 - Atomic tests + parallel 🤝
-- Create new webdriver instance for every test (On JVM Wrap it with `ThreadLocal`)
+- Use Selenium Grid 👍
+- Create a new webdriver instance for every test 
 - Don't use **static keyword/shared state**
 
 ## Page object
@@ -83,8 +88,8 @@ assertThat(addedTodosText).isEqualTo(note);
 
 ## Page factory
 
-- Caches looked up elements on instantiation
-- Don't use for elements that can change (AJAX)
+- Easily specify WebElement/s to be found
+- Use `@CacheLookup` to keep WebElement for static elements
 
 ```java
 public class HomePage extends BasePage {
@@ -115,7 +120,7 @@ public class HomePage extends BasePage {
 
 ## Screenplay pattern
 
-- Follows SOLID principles and takes a user centric view of writing automated acceptance tests
+- Follows **SOLID** principles and takes a user centric view of writing automated acceptance tests
 - Check out
   [Serenity BDD](https://serenity-bdd.github.io/theserenitybook/latest/serenity-screenplay.html)
 
