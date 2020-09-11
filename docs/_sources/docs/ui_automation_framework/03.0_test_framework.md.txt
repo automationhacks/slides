@@ -40,7 +40,7 @@ Think ! 🤔️ Who would be the primary **author** of these tests?
 
 - Maintaining a BDD layer (feature files, step definitions) can be an overhead
 - Less flexible
-- (Trap 👺) Feature files can be **imperative** instead of**declarative**
+- (Trap 👺) Feature files can be **imperative** instead of **declarative**
 
 ### Imperative
 
