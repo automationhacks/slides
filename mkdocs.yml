@@ -1,3 +1,17 @@
 site_name: Talks by automationhacks 
 theme:
   name: material
+  palette:
+    primary: teal
+  font:
+    code: Menlo
+  features:
+    - navigation.tabs
+google_analytics:
+  - UA-177852015-1
+  - auto
+extra:
+  disqus: automationhacks
+markdown_extensions:
+  - meta
+
