@@ -16,6 +16,12 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 - Sample project with code:
   [automationhacks/todo-mvc-automation-framework](https://github.com/automationhacks/todo-mvc-automation-framework/tree/master/todo-mvc-java)
 
+## Talk video
+
+You can watch the Selenium Conf talk on this topic below:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ZZ82P3teH0w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## How to find me on the 🕸
 
 alias = `automationhacks` 🤖
