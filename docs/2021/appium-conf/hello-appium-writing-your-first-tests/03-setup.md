@@ -2,13 +2,13 @@
 
 ## What do you need to start?
 
-> Lets install some tools and libraries
-
 ### Language, IDE, Build tool
 
 - Java
 - IntelliJ
 - Gradle
+
+> Or choose a language ecosystem of your choice
 
 ### For iOS
 
@@ -21,10 +21,10 @@
 
 ### Tools
 
-- Homebrew
-- Node
-- NPM
-- Appium Server
-- Appium Desktop
+- **Homebrew** - General package manager
+- **Node** - JavaScript runtime built on Chrome's V8 JavaScript engine
+- **NPM** - Package manager for JS
+- **Appium Server** - Exposes REST API for mobile automation
+- **Appium Desktop** - Desktop app to help inspect and automate apps
 
 > Don't worry, we'll install all these step by step. 😉

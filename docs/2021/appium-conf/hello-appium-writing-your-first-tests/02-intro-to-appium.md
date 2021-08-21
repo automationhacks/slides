@@ -48,12 +48,12 @@ Typical flow
 
 - `Node.js` server that bridges commands to native frameworks from vendors (Google, Apple)
 
-### Appium Clients
+### [Appium Clients](https://appium.io/docs/en/about-appium/appium-clients/)
 
 - Clients that adhere to **WebDriver protocol** and exposes actions
 - Test code uses these clients to perform desired actions on devices
 
-### Appium Desktop
+### [Appium Desktop](https://github.com/appium/appium-desktop)
 
 - Desktop app to support identifying elements and aid writing automated tests
 

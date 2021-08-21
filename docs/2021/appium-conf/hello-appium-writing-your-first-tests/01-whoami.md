@@ -6,13 +6,14 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 
 - 🏡 Bangalore, India 🇮🇳
 - Experienced **Software engineer in Test**
-- Enjoy building **scalable test frameworks** and tools for Web/Mobile/API and high performing teams
+- Enjoy building **scalable test frameworks** and tools for Web/Mobile/API and **high performing
+  teams**
 - Polyglot programmer with experience in **Kotlin, Java, Python, JavaScript**
-- ❤️ Exploratory testing and all things Quality
+- ❤️ Exploratory Testing
 - [Test automation university instructor](https://automationhacks.io/courses/) and
   [conference speaker](https://automationhacks.io/talks/)
-- Happily employed as an Engineering Manager - SDET at Gojek. We are hiring. Check us out at
-  [Gojek careers](https://career.gojek.com/)
+- Happily employed as an **Engineering Manager - SDET** at Gojek (SEA Go-to ecosystem for on demand
+  services). We are hiring 😍. Check us out at [Gojek careers](https://career.gojek.com/)
 
 ## Slides/Code
 
@@ -22,7 +23,7 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 
 ## Talk video
 
-- I'll update the video here once its out. 🚀😉
+- I'll update the video **here** once its out. 🚀😉
 
 ## How to find me on the 🕸
 

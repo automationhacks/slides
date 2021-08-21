@@ -1,8 +1,9 @@
 # Hello Appium! Setting up your First Appium Tests efficiently
 
-## Motivation
+## Why this talk?
 
-- Back in 2018
-- I struggled for 3 days just to get appium setup and run my first test
-- I want to save you **that pain**
-- Let's make getting started with Appium easier
+- I started learning Appium back in 2018 for work 👨🏻‍💻
+- I remember struggling for **3 odd days** just to get appium setup and run my first test on android
+  🤦
+- I want to save you 🤞 **that pain**
+- Let's make **getting started with Appium easier**

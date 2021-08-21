@@ -11,7 +11,8 @@ On macOS
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-> On Linux: You may need to install [linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)
+> On Linux or WSL (Windows subsystem for linux): You may need to install
+> [linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)
 
 ## Step 2: Install node
 
@@ -47,16 +48,34 @@ Run below command:
 npm install -g appium
 ```
 
-> `-g` indicates that this package would be
-> [installed globally](https://docs.npmjs.com/downloading-and-installing-packages-globally)
+> - 🔺 Do not use `sudo` to install appium server
+> - `-g` indicates that this package would be
+>   [installed globally](https://docs.npmjs.com/downloading-and-installing-packages-globally)
+
+Verify appium server is installed
+
+```zsh
+➜  appium-fast-boilerplate git:(main) appium
+[Appium] Welcome to Appium v1.17.0
+[Appium] Appium REST http interface listener started on 0.0.0.0:4723
+```
+
+You will see all server logs in this terminal window.
 
 ## Step 4: Install Android Studio
 
-- We need command line tools like adb, emulators etc to work with android
-- Easiest way is to install [Android studio](https://developer.android.com/studio)
+- We need command line tools like **adb, emulators** etc to work with android
+- Easiest way is to download and install [Android studio](https://developer.android.com/studio)
+- Once installed make sure SDK tools are installed via SDK manager
 
-Add below environment variables in either `.bash_profile` or `.zshrc` (followed by running
-`source file_name`) or add them in your System environments on Windows
+![Click on Configure > SDK manager](images/sdk-manager.png)
+
+![Click on SDK tools](images/sdk-tools.png)
+
+Add below environment variables:
+
+- On Mac/Linux: In `.bash_profile` or `.zshrc` (followed by running `source .zshrc`)
+- On Windows: Add them in your System environments variables on Windows
 
 ```zsh
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -77,7 +96,7 @@ Installed as /Users/gauravsingh/Library/Android/sdk/platform-tools/adb
 
 ## Step 5: Install Java and set JAVA_HOME
 
-Either install Java from oracle site or the openjdk version
+Either install Java from oracle site or the OpenJDK version
 
 - [Oracle download site](https://www.oracle.com/in/java/technologies/javase-downloads.html)
 - [Open jdk](https://adoptopenjdk.net/?variant=openjdk8&jvmVariant=hotspot)
@@ -98,15 +117,22 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 ---
 
-> 🥳 Milestone: We've setup everything for android tests! Let's setup iOS as well. 😉
+> 🥳 Milestone: Congratulations! We've setup everything for android tests! Let's setup iOS as well.
+> 😉
 
 ## Step 6: Install [carthage](https://github.com/Carthage/Carthage)
+
+- Allows to add frameworks to Cocoa applications, allows to build dependencies
 
 ```zsh
 brew install carthage
 ```
 
-## Step X: Verify dependencies are installed with Appium Doctor
+## Step 7: Verify dependencies are installed with Appium Doctor
+
+- Appium doctor is a CLI that provides insights on what dependencies are missing as well as how to
+  install them
+- Make sure all required dependencies are installed
 
 ```zsh
 npm install -g appium-doctor
@@ -121,6 +147,24 @@ appium-doctor
 appium-doctor --android
 # For only iOS
 appium-doctor --ios
+```
+
+For example:
+
+If I run it at this point of time, it intelligently warns me about below:
+
+![Appium Doctor](images/appium-doctor.png)
+
+## Step 8: Optional iOS dependencies
+
+### IDB (iOS Device bridge)
+
+[Instructions](https://github.com/appium/appium-idb)
+
+```zsh
+brew tap facebook/fb
+brew install idb-companion
+pip3.6 install fb-idb
 ```
 
 ## References
