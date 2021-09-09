@@ -1,4 +1,6 @@
-# Setup android emulator
+# Setup android emulator or real device
+
+## Setting up emulator
 
 Let's launch our first emulator
 
@@ -27,3 +29,11 @@ Give the emulator a name
 Play and start your emulator
 
 ![Start emulator](images/6-start-emulator.png)
+
+## Setting up real device
+
+Easiest setup is to connect your real device via USB
+
+Go to About phone and tap on Android build number multiple times until developer mode is enabled
+
+Go to Developer Options and **Enable USB debugging**

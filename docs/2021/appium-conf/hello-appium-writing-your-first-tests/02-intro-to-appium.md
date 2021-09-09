@@ -2,9 +2,9 @@
 
 ## What is appium?📱
 
-- Open source library to drive mobile apps (native, hybrid and mobile web apps on Android or iOS)
-  and desktop
-- Choose language of your choice (`Java, Python, JavaScript, Ruby, C#` ... 🆓)
+- Open source library to drive mobile apps (**native, hybrid and mobile web apps** on platforms like
+  Android, iOS and desktop
+- Choose language binding of your choice (`Java, Python, JavaScript, Ruby, C#` ... 🆓)
 - Does not reinvent the wheel and wraps automation libraries:
   - Google `UI Automator2/Espresso`
   - Apple `XCUITest/UIAutomation`
@@ -28,7 +28,7 @@
 
 Appium is a **web server** that exposes **REST APIs**
 
-Typical flow
+Typical request flow
 
 - Server receives connection from client
 - Server listens for commands

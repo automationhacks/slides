@@ -5,7 +5,7 @@
 - We'll need it to install `npm` and `node`
 - [Install instructions](https://docs.brew.sh/Installation)
 
-On macOS
+To Install on macOS
 
 ```zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

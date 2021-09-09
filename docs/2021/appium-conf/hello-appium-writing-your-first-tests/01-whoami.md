@@ -2,22 +2,23 @@
 
 Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 
-## `whoami`
+## `~ whoami`
 
 - 🏡 Bangalore, India 🇮🇳
 - Experienced **Software engineer in Test**
 - Enjoy building **scalable test frameworks** and tools for Web/Mobile/API and **high performing
   teams**
 - Polyglot programmer with experience in **Kotlin, Java, Python, JavaScript**
-- ❤️ Exploratory Testing
+- I ❤️ Exploratory Testing
 - [Test automation university instructor](https://automationhacks.io/courses/) and
   [conference speaker](https://automationhacks.io/talks/)
-- Happily employed as an **Engineering Manager - SDET** at Gojek (SEA Go-to ecosystem for on demand
-  services). We are hiring 😍. Check us out at [Gojek careers](https://career.gojek.com/)
+- **Engineering Manager SDET** at Gojek (SEA Go-to ecosystem for on demand services). We are hiring
+  😍. Check us out at [Gojek careers](https://career.gojek.com/)
 
 ## Slides/Code
 
-- You can find the slides over at [automationhacks.io/slides]()
+- You can find the slides over at
+  [automationhacks.io/slides](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/00-welcome/)
 - Boilerplate project for setup:
   [automationhacks/appium-fast-boilerplate](https://github.com/automationhacks/appium-fast-boilerplate)
 
