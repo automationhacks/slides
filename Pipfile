@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 mkdocs-material = "*"
+mdx-truly-sane-lists = "*"
 
 [requires]
 python_version = "3.8"

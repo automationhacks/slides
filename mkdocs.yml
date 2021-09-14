@@ -10,4 +10,5 @@ google_analytics:
   - auto
 markdown_extensions:
   - meta
+  - mdx_truly_sane_lists
 
