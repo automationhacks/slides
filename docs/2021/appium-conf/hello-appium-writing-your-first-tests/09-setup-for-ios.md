@@ -46,3 +46,10 @@ brew tap facebook/fb
 brew install idb-companion
 pip3.6 install fb-idb
 ```
+
+## References
+
+- [appium-xcuitest-driver](https://github.com/appium/appium-xcuitest-driver)
+- [The XCUITest Driver for iOS](https://github.com/appium/appium/blob/master/docs/en/drivers/ios-xcuitest.md)
+- [Real device setup](http://appium.io/docs/en/drivers/ios-xcuitest-real-devices/)
+- [How to setup iOS Automation on Mac OS](https://www.youtube.com/watch?v=-_6C_-CMqSk)
