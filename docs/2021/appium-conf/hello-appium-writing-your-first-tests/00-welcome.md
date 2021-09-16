@@ -1,5 +1,7 @@
 # Hello Appium! Setting up your First Appium Tests efficiently
 
+![Speaker card](images/speaker-card.png)
+
 ## Why this talk?
 
 - I started learning Appium back in 2018 for work 👨🏻‍💻

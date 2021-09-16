@@ -44,6 +44,7 @@ Sample capabilities
 ```json
 {
 	"platformName": "android",
+	"automationName": "uiautomator2",
 	"platformVersion": "10",
 	"deviceName": "Automation",
 	"app": "/<absolute_path_to_project>/src/test/resources/ApiDemos-debug.apk",
