@@ -3,14 +3,15 @@
 ## What is appium?📱
 
 - Open source library to drive mobile apps (**native, hybrid and mobile web apps** on platforms like
-  Android, iOS and desktop
+  Android, iOS and desktop and many more 🚀)
 - Choose language binding of your choice (`Java, Python, JavaScript, Ruby, C#` ... 🆓)
 - Does not reinvent the wheel and wraps automation libraries:
   - Google `UI Automator2/Espresso`
   - Apple `XCUITest/UIAutomation`
   - Windows `WinApp`
 - No requirement of SDK or recompilation of the app
-- Compliant with Web driver protocol
+- Compliant with
+  [Web driver protocol](https://www.w3.org/TR/webdriver/#:~:text=WebDriver%20is%20a%20remote%20control,the%20behavior%20of%20web%20browsers.)
 - Works on all platforms (Windows, Mac, Linux)
 
 ## Core concepts

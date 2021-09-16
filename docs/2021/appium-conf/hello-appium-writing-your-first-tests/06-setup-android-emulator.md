@@ -32,8 +32,9 @@ Play and start your emulator
 
 ## Setting up real device
 
-Easiest setup is to connect your real device via USB
+- Easiest setup is to connect your real device via USB
+- Go to About phone
+- Tap on Android build number multiple times until developer mode is enabled
+- Go to Developer Options and **Enable USB debugging**
 
-Go to About phone and tap on Android build number multiple times until developer mode is enabled
-
-Go to Developer Options and **Enable USB debugging**
+![Android USB Debugging](images/android-developer-options-usb-debugging.png)

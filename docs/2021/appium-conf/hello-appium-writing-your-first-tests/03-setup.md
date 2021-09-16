@@ -1,8 +1,6 @@
-# Setup
+# What do you need to start?
 
-## What do you need to start?
-
-### Language, IDE, Build tool
+## Language, IDE, Build tool
 
 - Java
 - IntelliJ
@@ -10,16 +8,16 @@
 
 > Or choose a language ecosystem of your choice
 
-### For iOS
+## For iOS
 
 - Xcode with command line tools
 
-### For Android
+## For Android
 
 - Android SDK > 16
 - Android Studio
 
-### Tools
+## Tools
 
 - **Homebrew** - General package manager
 - **Node** - JavaScript runtime built on Chrome's V8 JavaScript engine

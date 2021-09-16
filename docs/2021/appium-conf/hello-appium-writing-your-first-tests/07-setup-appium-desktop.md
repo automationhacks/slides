@@ -70,16 +70,3 @@ Sample capabilities
 ## Step 5: Launch Appium Desktop to start investigating
 
 ![Appium Desktop](images/appium-desktop-5-for-your-app.png)
-
-## Bonus
-
-> On Android, you can use `uiautomatorviewer` to also capture the app XML tree to find suitable
-> locators
-
-Launch it by running below from your terminal
-
-```zsh
-/Library/Android/sdk/tools/bin/uiautomatorviewer/
-```
-
-![uiautomatorviewer](images/uiautomatorviewer.png)

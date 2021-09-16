@@ -1,4 +1,4 @@
-# Setup Common libraries
+# Common libraries and setup
 
 ## Step 1: Install homebrew
 
@@ -29,15 +29,13 @@ brew install node
 - Verify running below command returns version:
 
 ```zsh
-➜  appium-fast-boilerplate git:(main) node -v
-v14.14.0
+node -v
 ```
 
 And verify for npm as well
 
 ```zsh
-➜  appium-fast-boilerplate git:(main) npm -v
-6.14.8
+npm -v
 ```
 
 ## Step 3: Install Appium server
@@ -60,9 +58,9 @@ Verify appium server is installed
 [Appium] Appium REST http interface listener started on 0.0.0.0:4723
 ```
 
-You will see all server logs in this terminal window.
+> You will see all server logs in this terminal window.
 
-### Appium 2.0
+### Appium 2.0 🚀
 
 To install appium 2.0
 
@@ -70,7 +68,7 @@ To install appium 2.0
 npm install -g appium@next
 ```
 
-You'll get an output
+You'll get an output like
 
 ```text
 /usr/local/bin/appium -> /usr/local/lib/node_modules/appium/build/lib/main.js
@@ -83,12 +81,15 @@ Not auto-installing any drivers or plugins
 added 113 packages from 587 contributors, removed 316 packages, updated 136 packages and moved 5 packages in 81.611s
 ```
 
-Next up, We'll install android and iOS drivers
+Next up, We'll install android and iOS drivers for this project
 
 ```zsh
 appium driver install xcuitest
 appium driver install uiautomator2
 ```
+
+> You can list all available drivers using `appium driver list` Or only installed drivers using
+> `appium driver list --installed`
 
 After running `appium` command, you'll see an output like this and as you can see our installed
 drivers
@@ -104,9 +105,6 @@ drivers
 [Appium]   - xcuitest@3.53.1 (automationName 'XCUITest')
 [Appium]   - uiautomator2@1.67.0 (automationName 'UiAutomator2')
 ```
-
-You can see more options in Appium 2.0
-[here](https://appiumpro.com/editions/122-installing-appium-20-and-the-driver-and-plugins-cli)
 
 ## Step 4: Install Java and set JAVA_HOME
 
@@ -131,8 +129,7 @@ export PATH=$JAVA_HOME/bin:$PATH
 
 ---
 
-> 🥳 Milestone: Congratulations! We've setup everything for android tests! Let's setup iOS as well.
-> 😉
+> 🥳 Milestone: Congratulations! We've setup everything for android tests! 😉
 
 ## Step 5: Verify dependencies are installed with Appium Doctor
 
@@ -165,3 +162,5 @@ If I run it at this point of time, it intelligently warns me about below:
 
 - [Getting started](http://appium.io/docs/en/about-appium/getting-started/index.html#getting-started)
 - [Installing Appium 2.0 and the Driver and Plugins CLI](https://appiumpro.com/editions/122-installing-appium-20-and-the-driver-and-plugins-cli)
+- [Getting Started with Appium 2.0 Beta](https://applitools.com/blog/appium-2-0-beta/)
+- [First Look at Appium 2.0 and New Drivers](https://www.headspin.io/blog/first-look-at-appium-2-0-and-new-drivers)

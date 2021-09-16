@@ -12,8 +12,8 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 - I ❤️ Exploratory Testing
 - [Test automation university instructor](https://automationhacks.io/courses/) and
   [conference speaker](https://automationhacks.io/talks/)
-- **Engineering Manager SDET** at Gojek (SEA Go-to ecosystem for on demand services). We are hiring
-  😍. Check us out at [Gojek careers](https://career.gojek.com/)
+- **Engineering Manager SDET** at Gojek (SEA GoTo ecosystem for on demand services). Btw, 🟢 We are
+  hiring 😍. Check us out at [Gojek careers](https://career.gojek.com/)
 
 ## Slides/Code
 
