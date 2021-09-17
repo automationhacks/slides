@@ -91,3 +91,7 @@ For real device:
 ## Step 5: Launch Appium Desktop to start investigating
 
 ![Appium Desktop](images/appium-desktop-5-for-your-app.png)
+
+> Note: Appium project recently split Appium Desktop (Server + Inspector) into a separate inspector.
+> Using this, you can run appium server via command line and just use inspector (It's also a light
+> weight install). You can download the app from [here](https://github.com/appium/appium-inspector)
