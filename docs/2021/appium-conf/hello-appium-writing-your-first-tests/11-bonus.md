@@ -1,15 +1,15 @@
-# Bonus tools
+# Bonus Tools
 
 ## Screen share on android
 
-[Scrcpy from Genymobile](https://github.com/Genymobile/scrcpy)
+[Scrcpy from Genymobile](https://github.com/Genymobile/scrcpy) to screen share a read device
 
 ```zsh
 brew install scrcpy
 brew install android-platform-tools
 ```
 
-## Android UIAutomatorViewer
+## Android UI Automator Viewer
 
 > On Android, you can use `uiautomatorviewer` to also capture the app XML tree to find suitable
 > locators
@@ -24,7 +24,7 @@ Launch it by running below from your terminal
 
 ## ADB Commands
 
-Read
+Read  
 [Using adb and cmdline to ease android app testing](https://automationhacks.io/2020/06/11/using-adb-and-cmdline-to-ease-android-app-testing/)
 
 ## Macaca App Inspector

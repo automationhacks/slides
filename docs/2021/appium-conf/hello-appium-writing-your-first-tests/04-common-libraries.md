@@ -127,10 +127,6 @@ export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Home
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
----
-
-> 🥳 Milestone: Congratulations! We've setup everything for android tests! 😉
-
 ## Step 5: Verify dependencies are installed with Appium Doctor
 
 - Appium doctor is a CLI that provides insights on what dependencies are missing as well as how to

@@ -31,3 +31,7 @@ Android Debug Bridge version 1.0.41
 Version 30.0.5-6877874
 Installed as /Users/gauravsingh/Library/Android/sdk/platform-tools/adb
 ```
+
+---
+
+> 🥳 Milestone: Congratulations! We've setup everything for android tests! 😉

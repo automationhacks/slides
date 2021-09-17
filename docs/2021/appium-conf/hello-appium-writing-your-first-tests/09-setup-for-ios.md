@@ -1,6 +1,12 @@
 # Setup for iOS
 
-## Step 1: Install [carthage](https://github.com/Carthage/Carthage)
+## Step 1: Install XCode Select
+
+```zsh
+xcode-select --install
+```
+
+## Step 2: Install [carthage](https://github.com/Carthage/Carthage)
 
 - Allows to add frameworks to Cocoa applications
 - Allows to build dependencies
@@ -9,7 +15,7 @@
 brew install carthage
 ```
 
-## Step 2: Install [libimobiledevice](https://github.com/libimobiledevice/libimobiledevice)
+## Step 3: Install [libimobiledevice](https://github.com/libimobiledevice/libimobiledevice)
 
 - A library to communicate with services on iOS devices using native protocols.
 
@@ -17,7 +23,7 @@ brew install carthage
 brew install libimobiledevice
 ```
 
-## Step 3: Install [ios-deploy](https://github.com/ios-control/ios-deploy)
+## Step 4: Install [ios-deploy](https://github.com/ios-control/ios-deploy)
 
 - Install and debug iOS apps from the command line
 
@@ -25,13 +31,18 @@ brew install libimobiledevice
 brew install ios-deploy
 ```
 
-## Step 4: Install [ios-webkit-debug-proxy](https://github.com/google/ios-webkit-debug-proxy)
+## Step 5: Install [ios-webkit-debug-proxy](https://github.com/google/ios-webkit-debug-proxy)
+
+- `ios_webkit_debug_proxy` (aka `iwdp`) proxies requests from `usbmuxd` daemon over a websocket
+  connection
+- Allows developers to send commands to MobileSafari and UIWebViews on real and simulated iOS
+  devices.
 
 ```zsh
 brew install ios-webkit-debug-proxy
 ```
 
-## Step 5: Optional iOS dependencies
+## Step 6: Optional iOS dependencies
 
 ### IDB (iOS Device bridge)
 
