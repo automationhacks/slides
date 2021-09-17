@@ -67,6 +67,27 @@ Sample capabilities
 }
 ```
 
+For real device:
+
+```json
+{
+	"bundleId": "<your_app_bundle_id>",
+	"automationName": "XCUITest",
+	"xcodeOrgId": "<your_team_name>",
+	"xcodeSigningId": "iPhone Developer",
+	"waitForQuiescence": false,
+	"useNewWDA": false,
+	"wdaStartupRetries": 2,
+	"resetOnSessionStartOnly": false,
+	"useJSONSource": true,
+	"shouldUseSingletonTestManager": false,
+	"wdaLaunchTimeout": "999999999",
+	"wdaConnectionTimeout": "999999999",
+	"autoAcceptAlerts": true,
+	"autoDismissAlerts": false
+}
+```
+
 ## Step 5: Launch Appium Desktop to start investigating
 
 ![Appium Desktop](images/appium-desktop-5-for-your-app.png)
