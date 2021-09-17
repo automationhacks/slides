@@ -88,7 +88,7 @@ For real device:
 }
 ```
 
-## Step 5: Launch Appium Desktop to start investigating
+## Step 5: Launch Appium Desktop or Appium Inspector to start investigating
 
 ![Appium Desktop](images/appium-desktop-5-for-your-app.png)
 
