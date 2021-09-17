@@ -19,8 +19,14 @@ This test performs below:
 - Verifies the log text is displayed
 
 ```java
+import constants.TestGroups;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import pages.apidemos.home.APIDemosHomePage;
+
 public class AndroidTest extends BaseTest {
-    @Test
+
+    @Test(groups = {TestGroups.ANDROID})
     public void testLogText() {
         String logText = new APIDemosHomePage(this.driver)
                 .openText()
@@ -31,6 +37,7 @@ public class AndroidTest extends BaseTest {
         Assert.assertEquals(logText, "This is a test");
     }
 }
+
 ```
 
 ## Driver setup in Base Test
@@ -38,23 +45,34 @@ public class AndroidTest extends BaseTest {
 We spin up driver instance in `BaseTest` class
 
 ```java
+import constants.Target;
+import core.driver.DriverManager;
+import core.utils.PropertiesReader;
+import exceptions.PlatformNotSupportException;
+import io.appium.java_client.AppiumDriver;
+import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+
+import java.io.IOException;
+
 public class BaseTest {
     protected AppiumDriver driver;
     protected PropertiesReader reader = new PropertiesReader();
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup(ITestContext context) {
-        context.setAttribute("platform", reader.getPlatform());
+        context.setAttribute("target", reader.getTarget());
 
         try {
-            Platform platform = (Platform) context.getAttribute("platform");
-            this.driver = new DriverManager().getInstance(platform);
+            Target target = (Target) context.getAttribute("target");
+            this.driver = new DriverManager().getInstance(target);
         } catch (IOException | PlatformNotSupportException e) {
             e.printStackTrace();
         }
     }
 
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void teardown() {
         driver.quit();
     }
@@ -71,19 +89,34 @@ We use this reusable class to:
   remote cloud lab
 
 ```java
+package core.driver;
+
+import constants.Target;
+import exceptions.PlatformNotSupportException;
+import io.appium.java_client.AppiumDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.HashMap;
+
+import static core.utils.CapabilitiesHelper.readAndMakeCapabilities;
+
 public class DriverManager {
     private static AppiumDriver driver;
     // For Appium < 2.0, append /wd/hub to the APPIUM_SERVER_URL
     String APPIUM_SERVER_URL = "http://127.0.0.1:4723";
 
-    public AppiumDriver getInstance(Platform platform) throws IOException, PlatformNotSupportException {
-        switch (platform) {
+    public AppiumDriver getInstance(Target target) throws IOException, PlatformNotSupportException {
+        System.out.println("Getting instance of: " + target.name());
+        switch (target) {
             case ANDROID:
                 return getAndroidDriver();
             case IOS:
                 return getIOSDriver();
             default:
-                throw new PlatformNotSupportException("Please provide supported platform");
+                throw new PlatformNotSupportException("Please provide supported target");
         }
     }
 
@@ -148,7 +181,7 @@ public class APIDemosHomePage extends BasePage {
 }
 ```
 
-## Base Page (Initial)
+## Base Page
 
 Every page object inherits from a `BasePage` that wraps appium methods
 
