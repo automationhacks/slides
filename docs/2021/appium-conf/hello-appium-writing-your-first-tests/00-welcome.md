@@ -1,4 +1,4 @@
-# Hello Appium! Setting up your First Appium Tests efficiently
+# Hello Appium! Setting up your First Appium Tests efficiently 👋
 
 ![Speaker card](images/speaker-card.png)
 

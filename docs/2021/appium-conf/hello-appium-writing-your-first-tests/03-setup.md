@@ -1,4 +1,4 @@
-# What do you need to start?
+# What do you need to start? 🧰
 
 ## Language, IDE, Build tool
 

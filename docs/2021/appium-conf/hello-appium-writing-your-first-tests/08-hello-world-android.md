@@ -1,4 +1,4 @@
-# Hello world! Android
+# Hello world! Android 🙌
 
 ## Sample apps
 

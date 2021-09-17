@@ -1,4 +1,4 @@
-# The end: Where do you go next? 🤘🏼
+# The end: Where do you go next? ☯️
 
 - Thank you for your kind attention 🙌
 - Any questions or feedback? Please reach out on any of the channels at

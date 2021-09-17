@@ -1,4 +1,4 @@
-# Setup for iOS
+# Setup for iOS 📱
 
 ## Step 1: Install XCode Select
 

@@ -1,4 +1,4 @@
-# Setup for Android
+# Setup for Android 🤖
 
 ## Step 1: Install Android Studio
 

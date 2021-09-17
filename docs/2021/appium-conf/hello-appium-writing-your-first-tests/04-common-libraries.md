@@ -1,4 +1,4 @@
-# Common libraries and setup
+# Common libraries and setup ⚒️
 
 ## Step 1: Install homebrew
 

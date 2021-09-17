@@ -1,4 +1,4 @@
-# Setup android emulator or real device
+# Setup android emulator or real device 🤖
 
 ## Setting up emulator
 

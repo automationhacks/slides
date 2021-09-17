@@ -1,4 +1,4 @@
-# Appium Desktop
+# Appium Desktop 🖥️
 
 ## Step 1: Download appium desktop
 

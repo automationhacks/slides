@@ -1,4 +1,4 @@
-# Introduction to appium
+# Introduction to appium 📱
 
 ## What is appium?📱
 
