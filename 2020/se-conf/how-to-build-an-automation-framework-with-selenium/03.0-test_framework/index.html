@@ -1,0 +1,1057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Choosing a test framework and assertion lib ⚙️ - Talks by automationhacks</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#009485">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-177852015-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){var e;this.value&&(e=document.location.pathname,ga("send","pageview",e+"?q="+this.value))}),"undefined"!=typeof location$&&location$.subscribe(function(e){ga("send","pageview",e.pathname)})})</script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="teal" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#choosing-a-test-framework-and-assertion-lib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Talks by automationhacks" class="md-header__button md-logo" aria-label="Talks by automationhacks" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Talks by automationhacks
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Choosing a test framework and assertion lib ⚙️
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../../.." class="md-tabs__link">
+      Welcome
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../00-about/" class="md-tabs__link md-tabs__link--active">
+        2020
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    
+
+  
+  
+  
+    
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/00-welcome/" class="md-tabs__link">
+        2021
+      </a>
+    </li>
+  
+
+  
+
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Talks by automationhacks" class="md-nav__button md-logo" aria-label="Talks by automationhacks" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Talks by automationhacks
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Welcome
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2">
+        2020
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2020" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          2020
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Se conf
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Se conf" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Se conf
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1_1">
+        How to build an automation framework with selenium
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="How to build an automation framework with selenium" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          How to build an automation framework with selenium
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-about/" class="md-nav__link">
+        About me
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        Introduction to building frameworks 🏗
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02.0-language/" class="md-nav__link">
+        Choosing a language ✏️
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Choosing a test framework and assertion lib ⚙️
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Choosing a test framework and assertion lib ⚙️
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xunit-style" class="md-nav__link">
+    xUnit style 🤖
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bdd" class="md-nav__link">
+    BDD 🤝
+  </a>
+  
+    <nav class="md-nav" aria-label="BDD 🤝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative" class="md-nav__link">
+    Imperative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarative" class="md-nav__link">
+    Declarative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-an-fluent-assertion-library" class="md-nav__link">
+    Choosing an fluent assertion library 🕵🏻‍♂️
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04.0-reporting/" class="md-nav__link">
+        Logging/reporting 📈
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05.0-ci/" class="md-nav__link">
+        Continuous Integration (CI) 🏃🏻‍♂️
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06.0-grid/" class="md-nav__link">
+        In house vs cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07.0-patterns/" class="md-nav__link">
+        Sensible patterns and practices 😇
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08.0-anti-patterns/" class="md-nav__link">
+        Avoid these anti patterns
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09.0-next-steps/" class="md-nav__link">
+        Next steps: Where do you go from here
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        2021
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="2021" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1">
+        Appium conf
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appium conf" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Appium conf
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1_1" type="checkbox" id="__nav_3_1_1" >
+      
+      <label class="md-nav__link" for="__nav_3_1_1">
+        Hello appium writing your first tests
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hello appium writing your first tests" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Hello appium writing your first tests
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/00-welcome/" class="md-nav__link">
+        Hello Appium! Setting up your First Appium Tests efficiently 👋
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/01-whoami/" class="md-nav__link">
+        About me 🧑‍💻
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/02-intro-to-appium/" class="md-nav__link">
+        Introduction to appium 📱
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/03-setup/" class="md-nav__link">
+        What do you need to start? 🧰
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/04-common-libraries/" class="md-nav__link">
+        Common libraries and setup ⚒️
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/05-setup-for-android/" class="md-nav__link">
+        Setup for Android 🤖
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/06-setup-android-emulator/" class="md-nav__link">
+        Setup android emulator or real device 🤖
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/07-setup-appium-desktop/" class="md-nav__link">
+        Appium Desktop 🖥️
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/08-hello-world-android/" class="md-nav__link">
+        Hello world! Android 🙌
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/09-setup-for-ios/" class="md-nav__link">
+        Setup for iOS 📱
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/10-hello-world-ios/" class="md-nav__link">
+        Hello world! iOS 📱
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/11-bonus/" class="md-nav__link">
+        Bonus Tools 🧰
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2021/appium-conf/hello-appium-writing-your-first-tests/12-fin/" class="md-nav__link">
+        The end? Or the beginning?: Where do you go next? ☯️
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#xunit-style" class="md-nav__link">
+    xUnit style 🤖
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bdd" class="md-nav__link">
+    BDD 🤝
+  </a>
+  
+    <nav class="md-nav" aria-label="BDD 🤝">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#imperative" class="md-nav__link">
+    Imperative
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#declarative" class="md-nav__link">
+    Declarative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-an-fluent-assertion-library" class="md-nav__link">
+    Choosing an fluent assertion library 🕵🏻‍♂️
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="choosing-a-test-framework-and-assertion-lib">Choosing a test framework and assertion lib ⚙️</h1>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>JVM (Java/Kotlin)</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xUnit style</td>
+<td>JUnit, TestNG</td>
+<td>pytest, unittest</td>
+</tr>
+<tr>
+<td>BDD</td>
+<td>Cucumber</td>
+<td>Behave, pytest-bdd</td>
+</tr>
+</tbody>
+</table>
+<p>Think ! 🤔️ Who would be the primary <strong>author</strong> of these tests?</p>
+<ul>
+<li>Developers, Automation engineers (Choose xUnit)?</li>
+<li>Product managers (PM), Manual testers (BDD <strong>can be</strong> an option)?</li>
+</ul>
+<h2 id="xunit-style">xUnit style 🤖</h2>
+<p><strong>Benefits</strong> ➕</p>
+<ul>
+<li>Fast and flexible</li>
+<li>Setup/tear downs at different levels (Suite, Class, Test)</li>
+<li>Easy to <strong>data drive/parallelize</strong> tests</li>
+</ul>
+<p><strong>Tradeoffs</strong> ➖</p>
+<ul>
+<li>Can be less readable (if not well designed)</li>
+</ul>
+<blockquote>
+<p>Tip: 💡 Write tests using <a href="http://wiki.c2.com/?ArrangeActAssert">arrange-act-assert</a> pattern.</p>
+</blockquote>
+<h2 id="bdd">BDD 🤝</h2>
+<blockquote>
+<p>If you think Cucumber is a testing tool, please read on, because you are wrong. - Aslak Hellesøy
+Reference:
+<a href="https://cucumber.io/blog/collaboration/the-worlds-most-misunderstood-collaboration-tool/">The worlds most misunderstood collaboration tool</a></p>
+</blockquote>
+<p><strong>Benefits</strong> ➕</p>
+<ul>
+<li>Readable (Gherkin syntax with <code>Given/When/Then/And</code>)</li>
+<li>Provides a layer to allow non-coders (PM/Manual test engineers) to also contribute</li>
+<li>More readable test results report</li>
+</ul>
+<p><strong>Tradeoffs</strong> ➖</p>
+<ul>
+<li>Maintaining a BDD layer (feature files, step definitions) can be an overhead</li>
+<li>Less flexible</li>
+<li>(Trap 👺) Feature files can be <strong>imperative</strong> instead of <strong>declarative</strong></li>
+</ul>
+<h3 id="imperative">Imperative</h3>
+<pre><code class="language-text">Given I open a browser
+And I navigate to http://example.com/login
+When I type in the username field bob97
+And I type in the password field F1d0
+And I click on Submit button
+Then I should see the message Welcome Back Bob
+</code></pre>
+<h3 id="declarative">Declarative</h3>
+<pre><code class="language-text">Given I am on the Login Page
+When I sign in with correct credentials
+Then I should see a welcome message
+</code></pre>
+<p><a href="https://wiki.saucelabs.com/display/DOCS/Best+Practices+for+Running+Tests">Source: Sauce labs best practices for running tests</a></p>
+<h2 id="choosing-an-fluent-assertion-library">Choosing an fluent assertion library 🕵🏻‍♂️</h2>
+<blockquote>
+<p>Let's not reinvent the wheel ☸️ shall we? 😄</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Java/Kotlin</th>
+<th>Python</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Google Truth ⭐️</td>
+<td>assertpy 🌟</td>
+</tr>
+</tbody>
+</table>
+<p>Other choices: Hamcrest, Native JUnit or TestNG</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../02.0-language/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Choosing a language ✏️" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Choosing a language ✏️
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../04.0-reporting/" class="md-footer__link md-footer__link--next" aria-label="Next: Logging/reporting 📈" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Logging/reporting 📈
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
