@@ -17,13 +17,14 @@ Hi 👋, I'm Gaurav Singh 🧔🏻👨‍💻
 ## Slides/Code
 
 - You can find the slides over at
-  [automationhacks.io/slides](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/00-welcome/) and then click on 2021 tab
+  [automationhacks.io/slides](https://automationhacks.io/slides/2021/appium-conf/hello-appium-writing-your-first-tests/00-welcome/)
+  and then click on 2021 tab
 - Boilerplate project for setup:
   [automationhacks/appium-fast-boilerplate](https://github.com/automationhacks/appium-fast-boilerplate)
 
-## Talk video
+## Video on YouTube
 
-- I'll update the video **here** once its out. 🚀😉
+<iframe width="560" height="315" src="https://www.youtube.com/embed/907U1VP0RpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How to find me on the 🕸
 
